@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DISCO XIV (D'Information System Community Outbound XIV) - HIMSI UMN. Acara outbound dan jamuan keakraban tahunan mahasiswa Sistem Informasi Universitas Multimedia Nusantara.">
+  <title>DISCO XIV - Satu Meja, Berjuta Cerita | HIMSI UMN</title>
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Core CSS Files -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo-disco-xiv.svg">
+</head>
+<body>
+  <!-- Accessible Skip to Content -->
+  <a href="#main-content" class="skip-to-content">Lewati ke konten utama</a>
+
+  <!-- Mobile Nav Checkbox Hack -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Buka navigasi menu">
+
+  <!-- Floating Pill Navbar -->
+  <header class="site-header">
+    <nav class="navbar-pill" aria-label="Navigasi Utama">
+      <!-- Left: Logo & Title -->
+      <a href="index.html" class="navbar-brand" aria-label="Beranda DISCO XIV">
+        <img src="assets/logo-disco-xiv.svg" alt="Logo Crest DISCO XIV" class="navbar-logo-img" width="42" height="42">
+        <span class="navbar-title-text">DISCO XIV</span>
+      </a>
+
+      <!-- Center: Navigation Pill Links -->
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="nav-pill-link active" aria-current="page">Beranda</a></li>
+        <li><a href="divisi.html" class="nav-pill-link">Divisi</a></li>
+        <li><a href="masuk.html" class="nav-pill-link">Masuk</a></li>
+        <li><a href="daftar.html" class="nav-pill-link">Daftar</a></li>
+      </ul>
+
+      <!-- Right: Language Selector Pill -->
+      <div class="navbar-lang-pill" aria-label="Pilih Bahasa">
+        <a href="index.html" class="lang-switch-btn active" aria-label="Bahasa Indonesia (Aktif)">ID</a>
+        <a href="en/index.html" class="lang-switch-btn" aria-label="Switch to English">EN</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Buka atau tutup menu navigasi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- ====================================================================
+         1. HERO SECTION (100vh) - Royal Banquet Evening
+         ==================================================================== -->
+    <section class="hero-section" aria-label="Pengenalan DISCO XIV">
+      <div class="container hero-grid">
+        <!-- Hero Left Column -->
+        <div class="hero-content">
+          <div class="hero-crest-badge">
+            <span>👑</span>
+            <span>HIMSI UMN MEMPERSEMBAHKAN</span>
+          </div>
+
+          <h1 class="hero-title">DISCO XIV</h1>
+
+          <p class="hero-tagline">"Satu Meja, Berjuta Cerita"</p>
+
+          <p class="hero-theme-note">
+            Malam Keakraban &amp; Jamuan Perjamuan Agung Mahasiswa Sistem Informasi UMN di Villa Pegunungan.
+          </p>
+
+          <!-- Static Date Pill (TODO: Sesuaikan tanggal pasti acara) -->
+          <div class="hero-date-pill">
+            <span class="hero-date-icon" aria-hidden="true">📅</span>
+            <span>Jumat–Minggu, 6–8 November 2027</span>
+            <!-- TODO: Tanggal placeholder -->
+          </div>
+
+          <div class="hero-actions">
+            <a href="daftar.html" class="btn-royal btn-royal-lg">
+              <span>Daftar Sekarang</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="masuk.html" class="btn-royal-outline btn-royal-lg">
+              <span>Masuk Tamu</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Mascot Sir Disco Floating on Pedestal -->
+        <div class="hero-mascot-wrap">
+          <!-- Ambient Candle Glow sphere behind Sir Disco -->
+          <div class="candle-glow-sphere" aria-hidden="true"></div>
+
+          <!-- Sir Disco Mascot SVG -->
+          <img src="assets/mascot-sir-disco.svg" alt="Sir Disco, maskot resmi DISCO XIV dengan mahkota, jubah beludru, dan kartu menu" class="hero-mascot-img" width="360" height="375">
+
+          <!-- Ornate Pedestal -->
+          <div class="mascot-pedestal" aria-hidden="true"></div>
+
+          <!-- Mascot Caption -->
+          <div class="mascot-caption-pill">
+            <span>Sir Disco • Tuan Rumah Jamuan</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scalloped Curtain Transition to next section -->
+      <div class="hero-scallop-edge" aria-hidden="true"></div>
+    </section>
+
+    <!-- ====================================================================
+         2. APA ITU DISCO? - History & Heritage of HIMSI UMN Outbound
+         ==================================================================== -->
+    <section class="section-about-disco scroll-reveal" aria-labelledby="about-disco-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="eyebrow">Mengenal Tradisi Kami</span>
+          <h2 id="about-disco-title">Apa Itu DISCO?</h2>
+          <div class="gold-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-disco-grid">
+          <!-- Left: DISCO XIV Crest Emblem Card -->
+          <div class="about-disco-logo-card">
+            <div class="royal-crest-showcase">
+              <img src="assets/logo-disco-xiv.svg" alt="Lambang Kerajaan DISCO XIV" class="about-disco-crest-img" width="170" height="150">
+              <div class="about-disco-badge-tag">HIMSI UMN • EST. 2011</div>
+            </div>
+          </div>
+
+          <!-- Right: Narrative Heritage Card -->
+          <article class="parchment-card about-disco-narrative-card">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-bl" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-br" aria-hidden="true">
+
+            <h3 class="about-disco-card-heading">Sebuah Tradisi Keakraban Lebih dari 14 Tahun</h3>
+            <p class="about-disco-card-text">
+              <strong>D'Information System Community Outbound (DISCO)</strong> adalah acara tahunan kebanggaan <strong>HIMSI UMN</strong>, sebuah perayaan penuh kegembiraan yang mempererat solidaritas dan kehangatan kebersamaan di seluruh keluarga besar Sistem Informasi, mulai dari dosen, alumni, hingga mahasiswa aktif yang penuh semangat!
+            </p>
+            <p class="about-disco-card-text">
+              Lahir pada tahun 2011 dengan nama <em>D'Information System Community</em>, DISCO terus diwariskan dengan penuh cinta dan dedikasi dari generasi ke generasi HIMSI UMN, dan kini dengan bangga menjadi salah satu program kerja terlama dan paling dicintai sepanjang perjalanannya.
+            </p>
+            <p class="about-disco-card-text" style="margin-bottom: 0;">
+              Tahun ini, <strong>DISCO XIV</strong> mempertemukan kita kembali di meja jamuan kerajaan bertajuk <em>"Satu Meja, Berjuta Cerita"</em> di villa pegunungan — merajut tawa, tantangan outbound, dan kebersamaan yang tak terlupakan!
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. UNDANGAN SECTION - Royal Invitation & Theme Narrative
+         ==================================================================== -->
+    <section class="section-undangan scroll-reveal" aria-labelledby="undangan-title">
+      <div class="container invitation-wrapper">
+        <article class="parchment-card invitation-content">
+          <!-- Ornate Corner Flourishes -->
+          <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+          <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+          <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-bl" aria-hidden="true">
+          <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-br" aria-hidden="true">
+
+          <!-- Wax Seal Ribbon Ornament -->
+          <img src="assets/ornaments/wax-seal.svg" alt="Segel Lilin DISCO XIV" class="invitation-wax-seal" width="90" height="90">
+
+          <p class="invitation-salutation">Kepada Seluruh Tamu Kehormatan</p>
+          <h2 id="undangan-title" class="invitation-heading">Surat Undangan Jamuan Agung</h2>
+          <p class="invitation-theme">Malam Keakraban di Villa Pegunungan</p>
+
+          <div class="gold-divider" aria-hidden="true"></div>
+
+          <!-- Narrative placeholder (TODO) -->
+          <p class="invitation-prose">
+            Keluarga besar Sistem Informasi Universitas Multimedia Nusantara dengan bangga mengundang seluruh mahasiswa aktif untuk hadir sebagai tamu kehormatan dalam perhelatan agung <strong>DISCO XIV</strong>. Menghadirkan kembali tradisi outbound tahunan yang dirindukan di villa pegunungan, tahun ini kita bersanding dalam suasana jamuan makan malam kerajaan: <em>"Satu Meja, Berjuta Cerita"</em>.
+          </p>
+          <p class="invitation-prose">
+            Di sini, setiap peserta adalah bangsawan yang dihormati, setiap divisi kepanitiaan adalah kurator jamuan yang setia, dan setiap langkah kebersamaan adalah pengikat solidaritas tanpa memandang angkatan.
+          </p>
+
+          <!-- 3 Goals Styled as Menu Items -->
+          <div class="banquet-goals-grid">
+            <div class="goal-menu-item">
+              <div class="goal-course-number">Hidangan I</div>
+              <h3 class="goal-title">Mempererat Solidaritas</h3>
+              <p class="goal-description">
+                <!-- TODO: Deskripsi tujuan 1 -->
+                Menyatukan seluruh angkatan mahasiswa Sistem Informasi UMN dalam satu wadah persaudaraan yang erat dan hangat di bawah langit malam villa.
+              </p>
+            </div>
+
+            <div class="goal-menu-item">
+              <div class="goal-course-number">Hidangan II</div>
+              <h3 class="goal-title">Mengembangkan Potensi</h3>
+              <p class="goal-description">
+                <!-- TODO: Deskripsi tujuan 2 -->
+                Melatih kepemimpinan, pemecahan masalah bersama, serta ketangguhan mental lewat aneka tantangan outbound kolaboratif.
+              </p>
+            </div>
+
+            <div class="goal-menu-item">
+              <div class="goal-course-number">Hidangan III</div>
+              <h3 class="goal-title">Jejaring & Kolaborasi</h3>
+              <p class="goal-description">
+                <!-- TODO: Deskripsi tujuan 3 -->
+                Membuka pintu komunikasi dan sinergi antargenerasi, menyiapkan langkah masa depan bersama keluarga besar HIMSI UMN.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. RANGKAIAN ACARA - Multi-Course Menu Timeline
+         ==================================================================== -->
+    <section class="section-timeline scroll-reveal" aria-labelledby="timeline-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="eyebrow">Tata Rangkaian Acara</span>
+          <h2 id="timeline-title">Menu Rangkaian Jamuan DISCO XIV</h2>
+          <div class="gold-divider" aria-hidden="true"></div>
+          <p class="section-subtitle">
+            Empat hidangan istimewa yang tersaji untuk menyempurnakan perjalanan kebersamaan kita.
+          </p>
+        </div>
+
+        <div class="timeline-menu-wrap">
+          <!-- Course 1: ECHO (CSR) -->
+          <div class="timeline-course-item">
+            <div class="timeline-node" aria-hidden="true">I</div>
+            <div class="course-info-col">
+              <div class="course-card">
+                <span class="course-badge">Course I • Pembuka Jamuan</span>
+                <h3 class="course-title">ECHO XIV (CSR Outreach)</h3>
+                <div class="course-meta">
+                  <span>📍 Yayasan / Panti Mitra — TBA</span>
+                  <!-- TODO: Venue ECHO -->
+                </div>
+                <p class="course-desc">
+                  <!-- TODO: Deskripsi ECHO -->
+                  Aksi bakti sosial dan kepedulian lingkungan sebagai wujud syukur dan kepedulian sosial mahasiswa Sistem Informasi bagi sesama.
+                </p>
+              </div>
+            </div>
+            <div class="course-date-col">
+              <div class="hero-date-pill">
+                <span>📅 Sabtu, 18 September 2027</span>
+                <!-- TODO: Tanggal ECHO -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2: DISTALK XIV (Pre-Event) -->
+          <div class="timeline-course-item">
+            <div class="timeline-node" aria-hidden="true">II</div>
+            <div class="course-info-col">
+              <div class="course-card">
+                <span class="course-badge">Course II • Jamuan Inspirasi</span>
+                <h3 class="course-title">DISTALK XIV (Pre-Event Seminar)</h3>
+                <div class="course-meta">
+                  <span>📍 Lecture Hall UMN</span>
+                  <!-- TODO: Venue DISTALK -->
+                </div>
+                <p class="course-desc">
+                  <!-- TODO: Deskripsi DISTALK -->
+                  Sesi bincang inspiratif dan pembekalan materi kepemimpinan bersama alumni serta praktisi industri sebelum bertolak ke villa.
+                </p>
+              </div>
+            </div>
+            <div class="course-date-col">
+              <div class="hero-date-pill">
+                <span>📅 Sabtu, 9 Oktober 2027</span>
+                <!-- TODO: Tanggal DISTALK -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3: DISCO XIV Main Event -->
+          <div class="timeline-course-item">
+            <div class="timeline-node" aria-hidden="true">III</div>
+            <div class="course-info-col">
+              <div class="course-card">
+                <span class="course-badge">Course III • Jamuan Utama</span>
+                <h3 class="course-title">DISCO XIV (Main Outbound di Villa)</h3>
+                <div class="course-meta">
+                  <span>📍 Villa Kawasan Puncak — TBA</span>
+                  <!-- TODO: Venue Main Event -->
+                </div>
+                <p class="course-desc">
+                  <!-- TODO: Deskripsi Main Event -->
+                  Puncak outbound 3 hari 2 malam di villa pegunungan: malam jamuan perjamuan agung, team-building outbound, dan kehangatan api unggun.
+                </p>
+              </div>
+            </div>
+            <div class="course-date-col">
+              <div class="hero-date-pill">
+                <span>📅 Jumat–Minggu, 6–8 November 2027</span>
+                <!-- TODO: Tanggal Main Event -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 4: Closing & Appreciation -->
+          <div class="timeline-course-item">
+            <div class="timeline-node" aria-hidden="true">IV</div>
+            <div class="course-info-col">
+              <div class="course-card">
+                <span class="course-badge">Course IV • Penutup Jamuan</span>
+                <h3 class="course-title">Malam Apresiasi & Penutupan</h3>
+                <div class="course-meta">
+                  <span>📍 Function Hall UMN</span>
+                  <!-- TODO: Venue Closing -->
+                </div>
+                <p class="course-desc">
+                  <!-- TODO: Deskripsi Closing -->
+                  Malam penganugerahan bagi divisi terbaik, peserta terfavorit, serta penayangan kilas balik perjalanan kebersamaan DISCO XIV.
+                </p>
+              </div>
+            </div>
+            <div class="course-date-col">
+              <div class="hero-date-pill">
+                <span>📅 Minggu, 21 November 2027</span>
+                <!-- TODO: Tanggal Closing -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. STATS STRIP - Static Gold Numerals in Ornate Frames
+         ==================================================================== -->
+    <section class="section-stats scroll-reveal" aria-label="Statistik DISCO XIV">
+      <div class="container">
+        <div class="stats-grid">
+          <!-- Stat 1: Peserta -->
+          <div class="stat-frame">
+            <div class="stat-number">450+</div>
+            <!-- TODO: Angka statis peserta -->
+            <div class="stat-label">Tamu Kehormatan</div>
+          </div>
+
+          <!-- Stat 2: Panitia -->
+          <div class="stat-frame">
+            <div class="stat-number">65+</div>
+            <!-- TODO: Angka statis panitia -->
+            <div class="stat-label">Kurator Jamuan</div>
+          </div>
+
+          <!-- Stat 3: Edisi -->
+          <div class="stat-frame">
+            <div class="stat-number">14</div>
+            <div class="stat-label">Edisi Tradisi</div>
+          </div>
+
+          <!-- Stat 4: Impresi -->
+          <div class="stat-frame">
+            <div class="stat-number">120K+</div>
+            <!-- TODO: Angka statis impresi IG -->
+            <div class="stat-label">Sorotan Media Sosial</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. EVENT DATE BLOCK - Styled Vintage Pocket-Watch / Clock Plaque
+         ==================================================================== -->
+    <section class="section-date-block scroll-reveal" aria-labelledby="countdown-title">
+      <div class="container">
+        <article class="pocket-watch-card">
+          <span class="eyebrow">Menghitung Waktu Perjamuan</span>
+          <h2 id="countdown-title">Masa Penantian Jamuan Utama</h2>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+          <p class="section-subtitle">
+            Pintu gerbang villa pegunungan akan segera dibuka bagi para tamu kehormatan.
+          </p>
+
+          <!-- JAVASCRIPT EXTENSION POINT: 
+               The countdown below uses STATIC numbers in compliance with tech constraints (no JS).
+               To connect dynamic countdown functionality in the future:
+               1. Select elements .countdown-digit.
+               2. Calculate remaining time to target date (e.g. 2027-11-06T15:00:00+07:00).
+               3. Update innerText dynamically every second via setInterval.
+          -->
+          <div class="countdown-grid" role="timer" aria-label="Penghitung waktu mundur statis ke hari H">
+            <div class="countdown-slot">
+              <div class="countdown-digit">08</div>
+              <div class="countdown-unit">Hari</div>
+            </div>
+            <div class="countdown-slot">
+              <div class="countdown-digit">14</div>
+              <div class="countdown-unit">Jam</div>
+            </div>
+            <div class="countdown-slot">
+              <div class="countdown-digit">30</div>
+              <div class="countdown-unit">Menit</div>
+            </div>
+            <div class="countdown-slot">
+              <div class="countdown-digit">00</div>
+              <div class="countdown-unit">Detik</div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.9rem; color: var(--color-parchment-border); margin-top: 1rem;">
+            📍 Lokasi Jamuan: <strong>Villa Kawasan Puncak (TBA)</strong> • Registrasi dibuka hingga kuota kehormatan terpenuhi.
+          </p>
+
+          <div style="margin-top: 1.5rem;">
+            <a href="daftar.html" class="btn-royal">
+              <span>Terima Undangan (RSVP)</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. PARTNER & SPONSOR CAROUSEL - Engraved Plaques Marquee
+         ==================================================================== -->
+    <section class="section-partners scroll-reveal" aria-labelledby="partners-title">
+      <div class="container">
+        <div class="section-title-wrap" style="margin-bottom: var(--space-xl);">
+          <span class="eyebrow">Dukungan Kerajaan</span>
+          <h2 id="partners-title">Mitra & Sahabat Jamuan</h2>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Marquee Container (Edge fade mask-image, pause on hover) -->
+      <div class="marquee-container" aria-label="Daftar mitra dan sponsor acara">
+        <div class="marquee-track">
+          <!-- Plaque 1 -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">HIMSI UMN</div>
+            <div class="partner-plaque-sub">Penyelenggara Utama</div>
+          </div>
+          <!-- Plaque 2 -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">Universitas Multimedia Nusantara</div>
+            <div class="partner-plaque-sub">Institusi Akademik</div>
+          </div>
+          <!-- Plaque 3 (TODO) -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">Grand Banquet Partner</div>
+            <div class="partner-plaque-sub">Sponsor Resmi (TODO)</div>
+          </div>
+          <!-- Plaque 4 (TODO) -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">Royal Beverage Co.</div>
+            <div class="partner-plaque-sub">Mitra Konsumsi (TODO)</div>
+          </div>
+          <!-- Plaque 5 (TODO) -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">UMN Radio</div>
+            <div class="partner-plaque-sub">Media Partner Resmi</div>
+          </div>
+          <!-- Plaque 6 (TODO) -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">UMN TV</div>
+            <div class="partner-plaque-sub">Media Partner Resmi</div>
+          </div>
+          <!-- Plaque 7 (TODO) -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">Tech Villa Sponsor</div>
+            <div class="partner-plaque-sub">Sponsor Pendukung (TODO)</div>
+          </div>
+
+          <!-- Duplicate Track for Seamless Marquee Loop -->
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">HIMSI UMN</div>
+            <div class="partner-plaque-sub">Penyelenggara Utama</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">Universitas Multimedia Nusantara</div>
+            <div class="partner-plaque-sub">Institusi Akademik</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">Grand Banquet Partner</div>
+            <div class="partner-plaque-sub">Sponsor Resmi (TODO)</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">Royal Beverage Co.</div>
+            <div class="partner-plaque-sub">Mitra Konsumsi (TODO)</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">UMN Radio</div>
+            <div class="partner-plaque-sub">Media Partner Resmi</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">UMN TV</div>
+            <div class="partner-plaque-sub">Media Partner Resmi</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">Tech Villa Sponsor</div>
+            <div class="partner-plaque-sub">Sponsor Pendukung (TODO)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER - Translucent Burgundy-to-Midnight with Starry Gold Dust
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Left: Address & Circular Mascot Badge -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <span aria-hidden="true">🏰</span>
+            <span>Alamat Sekretariat</span>
+          </h3>
+          <address class="footer-address">
+            <strong>HIMSI UMN</strong><br>
+            Universitas Multimedia Nusantara<br>
+            Jl. Scientia Boulevard, Gading Serpong<br>
+            Tangerang, Banten 15811
+          </address>
+          <!-- Mascot Badge SVG -->
+          <a href="index.html" aria-label="Kembali ke atas dengan Sir Disco">
+            <img src="assets/mascot-badge.svg" alt="Lencana Sir Disco Maskot Resmi" class="footer-mascot-badge" width="68" height="68">
+          </a>
+        </div>
+
+        <!-- Center: Crest Logo, Tagline, Copyright -->
+        <div class="footer-center">
+          <img src="assets/logo-disco-xiv.svg" alt="Logo Crest DISCO XIV" class="footer-logo" width="90" height="78">
+          <p class="footer-tagline">"Satu Meja, Berjuta Cerita"</p>
+          <div class="footer-hashtag">#SatuMejaBerjutaCerita</div>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+        </div>
+
+        <!-- Right: Social Media Links -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <span aria-hidden="true">📜</span>
+            <span>Media Sosial</span>
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--color-parchment-border); margin-bottom: 0.75rem;">
+            Ikuti warta dan perkembangan terbaru jamuan agung DISCO XIV:
+          </p>
+          <!-- Instagram Link -->
+          <a href="https://instagram.com/discoumn_si" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Kunjungi Instagram Resmi @discoumn_si">
+            <span aria-hidden="true">📷</span>
+            <span>@discoumn_si</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="footer-copyright">
+        <p>&copy; 2027 D'Information System Community Outbound. Seluruh hak cipta dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

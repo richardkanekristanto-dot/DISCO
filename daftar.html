@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RSVP Pendaftaran DISCO XIV - Sambut undangan jamuan agung outbound HIMSI UMN di villa. Formulir multi-step pendaftaran tamu dan pemilihan divisi.">
+  <title>RSVP Pendaftaran - DISCO XIV | HIMSI UMN</title>
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Core CSS Files -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo-disco-xiv.svg">
+</head>
+<body>
+  <!-- Accessible Skip to Content -->
+  <a href="#main-content" class="skip-to-content">Lewati ke konten utama</a>
+
+  <!-- Mobile Nav Checkbox Hack -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Buka navigasi menu">
+
+  <!-- Floating Pill Navbar -->
+  <header class="site-header">
+    <nav class="navbar-pill" aria-label="Navigasi Utama">
+      <!-- Left: Logo & Title -->
+      <a href="index.html" class="navbar-brand" aria-label="Beranda DISCO XIV">
+        <img src="assets/logo-disco-xiv.svg" alt="Logo Crest DISCO XIV" class="navbar-logo-img" width="42" height="42">
+        <span class="navbar-title-text">DISCO XIV</span>
+      </a>
+
+      <!-- Center: Navigation Pill Links -->
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="nav-pill-link">Beranda</a></li>
+        <li><a href="divisi.html" class="nav-pill-link">Divisi</a></li>
+        <li><a href="masuk.html" class="nav-pill-link">Masuk</a></li>
+        <li><a href="daftar.html" class="nav-pill-link active" aria-current="page">Daftar</a></li>
+      </ul>
+
+      <!-- Right: Language Selector Pill -->
+      <div class="navbar-lang-pill" aria-label="Pilih Bahasa">
+        <a href="daftar.html" class="lang-switch-btn active" aria-label="Bahasa Indonesia (Aktif)">ID</a>
+        <a href="en/daftar.html" class="lang-switch-btn" aria-label="Switch to English">EN</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Buka atau tutup menu navigasi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </nav>
+  </header>
+
+  <!-- Main Content: Royal RSVP Multi-Step Form -->
+  <main id="main-content" class="auth-page-wrap">
+    <div class="container">
+      <article class="parchment-card scroll-reveal" style="max-width: 780px; margin-inline: auto;">
+        <!-- Ornate Corner Flourishes -->
+        <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+        <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+        <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-bl" aria-hidden="true">
+        <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-br" aria-hidden="true">
+
+        <div class="auth-header" style="text-align: center;">
+          <span class="eyebrow">Balasan Surat Undangan (RSVP)</span>
+          <h1 class="auth-title">Pendaftaran Tamu Kehormatan</h1>
+          <p class="auth-subtitle">"Satu Meja, Berjuta Cerita" — Amankan Kursi Anda di Jamuan Villa</p>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+        </div>
+
+        <!-- Pure CSS Multi-Step Stepper (Radio Hack + :has) -->
+        <form action="#" method="get" class="registration-stepper" novalidate="false">
+          <!-- Hidden Radio Inputs for Step State -->
+          <input type="radio" name="reg-step" id="step-1" checked class="step-radio">
+          <input type="radio" name="reg-step" id="step-2" class="step-radio">
+          <input type="radio" name="reg-step" id="step-3" class="step-radio">
+          <input type="radio" name="reg-step" id="step-success" class="step-radio">
+
+          <!-- Stepper Progress Beads -->
+          <div class="stepper-progress" aria-label="Kemajuan Langkah Pendaftaran">
+            <div class="step-indicator">
+              <div class="step-bead">I</div>
+              <div class="step-label">Data Diri</div>
+            </div>
+            <div class="step-indicator">
+              <div class="step-bead">II</div>
+              <div class="step-label">Pilihan Divisi</div>
+            </div>
+            <div class="step-indicator">
+              <div class="step-bead">III</div>
+              <div class="step-label">Konfirmasi</div>
+            </div>
+          </div>
+
+          <div class="form-body">
+            <!-- ==========================================================
+                 STEP 1: Data Diri (Personal Details)
+                 ========================================================== -->
+            <div class="step-panel panel-step-1">
+              <h2 style="font-size: var(--font-size-md); color: var(--color-burgundy-primary); margin-bottom: var(--space-md); text-align: left;">
+                Langkah 1: Identitas Tamu Bangsawan
+              </h2>
+
+              <!-- Nama Lengkap -->
+              <div class="form-group">
+                <label for="reg-name" class="form-label">Nama Lengkap Sesuai KTM</label>
+                <input 
+                  type="text" 
+                  id="reg-name" 
+                  name="fullname" 
+                  class="form-input" 
+                  placeholder="Contoh: Raden Surya Atmadja" 
+                  required 
+                  minlength="3"
+                >
+                <div class="form-hint">Nama lengkap yang akan tercetak pada lencana kehormatan.</div>
+              </div>
+
+              <!-- NIM & Angkatan Grid -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                <div class="form-group">
+                  <label for="reg-nim" class="form-label">Nomor Induk Mahasiswa (NIM)</label>
+                  <input 
+                    type="text" 
+                    id="reg-nim" 
+                    name="nim" 
+                    class="form-input" 
+                    placeholder="Contoh: 00000089123" 
+                    pattern="[0-9]{11}" 
+                    required
+                  >
+                  <div class="form-hint">11 digit NIM resmi UMN.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="reg-batch" class="form-label">Angkatan Mahasiswa</label>
+                  <select id="reg-batch" name="batch" class="form-select" required>
+                    <option value="" disabled selected>Pilih Angkatan Anda</option>
+                    <option value="2027">Angkatan 2027 (Mahasiswa Baru)</option>
+                    <option value="2026">Angkatan 2026</option>
+                    <option value="2025">Angkatan 2025</option>
+                    <option value="2024">Angkatan 2024 &amp; Senior</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Email Student & WhatsApp -->
+              <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-md);">
+                <div class="form-group">
+                  <label for="reg-email" class="form-label">Email Mahasiswa (@student.umn.ac.id)</label>
+                  <input 
+                    type="email" 
+                    id="reg-email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="nama.depan@student.umn.ac.id" 
+                    required
+                  >
+                  <div class="form-hint">Surat konfirmasi villa akan dikirim ke alamat ini.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="reg-phone" class="form-label">Nomor WhatsApp Aktif</label>
+                  <input 
+                    type="tel" 
+                    id="reg-phone" 
+                    name="phone" 
+                    class="form-input" 
+                    placeholder="081234567890" 
+                    pattern="[0-9]{10,14}" 
+                    required
+                  >
+                  <div class="form-hint">Untuk dimasukkan ke grup perjamuan.</div>
+                </div>
+              </div>
+
+              <!-- Navigation to Step 2 -->
+              <div class="form-actions">
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);">* Seluruh data wajib diisi dengan benar</span>
+                <label for="step-2" class="btn-royal">
+                  <span>Lanjut ke Pilihan Divisi</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- ==========================================================
+                 STEP 2: Pilihan Divisi (Seat / Division Preference)
+                 ========================================================== -->
+            <div class="step-panel panel-step-2">
+              <h2 style="font-size: var(--font-size-md); color: var(--color-burgundy-primary); margin-bottom: var(--space-md); text-align: left;">
+                Langkah 2: Pilihan Peran &amp; Kursi Kepanitiaan
+              </h2>
+
+              <p style="font-size: 0.9rem; color: var(--color-text-dark); margin-bottom: var(--space-md); text-align: left;">
+                Pilihlah dua pilar divisi yang paling sesuai dengan bakat dan minat Anda untuk berkontribusi sebagai kurator jamuan DISCO XIV:
+              </p>
+
+              <!-- Pilihan Divisi 1 & 2 -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                <div class="form-group">
+                  <label for="reg-div-1" class="form-label">Pilihan Divisi Utama (Pilihan 1)</label>
+                  <select id="reg-div-1" name="division_primary" class="form-select" required>
+                    <option value="" disabled selected>Pilih Divisi Utama</option>
+                    <option value="acara">Divisi Acara (Program & Rundown)</option>
+                    <option value="konsumsi">Divisi Konsumsi (Katering Jamuan)</option>
+                    <option value="humas">Divisi Humas (Relasi & Duta)</option>
+                    <option value="sponsorship">Divisi Sponsorship (Kemitraan)</option>
+                    <option value="dokum">Dokumentasi & Publikasi (Media)</option>
+                    <option value="perlengkapan">Divisi Perlengkapan (Logistik & Sound)</option>
+                    <option value="k3">Kesehatan & Keamanan (Garda K3)</option>
+                    <option value="sekben">Sekretaris & Bendahara (Tata Kelola)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="reg-div-2" class="form-label">Pilihan Alternatif (Pilihan 2)</label>
+                  <select id="reg-div-2" name="division_secondary" class="form-select" required>
+                    <option value="" disabled selected>Pilih Divisi Alternatif</option>
+                    <option value="acara">Divisi Acara (Program & Rundown)</option>
+                    <option value="konsumsi">Divisi Konsumsi (Katering Jamuan)</option>
+                    <option value="humas">Divisi Humas (Relasi & Duta)</option>
+                    <option value="sponsorship">Divisi Sponsorship (Kemitraan)</option>
+                    <option value="dokum">Dokumentasi & Publikasi (Media)</option>
+                    <option value="perlengkapan">Divisi Perlengkapan (Logistik & Sound)</option>
+                    <option value="k3">Kesehatan & Keamanan (Garda K3)</option>
+                    <option value="sekben">Sekretaris & Bendahara (Tata Kelola)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Motivasi / Harapan -->
+              <div class="form-group">
+                <label for="reg-motivation" class="form-label">Motivasi & Harapan Mengikuti DISCO XIV</label>
+                <textarea 
+                  id="reg-motivation" 
+                  name="motivation" 
+                  rows="4" 
+                  class="form-textarea" 
+                  placeholder="Ceritakan alasan dan pengalaman yang ingin Anda dapatkan di perjamuan outbound tahun ini..." 
+                  required 
+                  minlength="15"
+                ></textarea>
+                <div class="form-hint">Minimal 15 karakter. Tuliskan dengan tulus dan antusias.</div>
+              </div>
+
+              <!-- Navigation: Back to Step 1 or Next to Step 3 -->
+              <div class="form-actions">
+                <label for="step-1" class="btn-royal-outline">
+                  <span aria-hidden="true">&larr;</span>
+                  <span>Kembali</span>
+                </label>
+                <label for="step-3" class="btn-royal">
+                  <span>Lanjut ke Konfirmasi</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- ==========================================================
+                 STEP 3: Konfirmasi (Review & Oath)
+                 ========================================================== -->
+            <div class="step-panel panel-step-3">
+              <h2 style="font-size: var(--font-size-md); color: var(--color-burgundy-primary); margin-bottom: var(--space-md); text-align: left;">
+                Langkah 3: Ikrar Kehormatan &amp; Konfirmasi RSVP
+              </h2>
+
+              <div class="goal-menu-item" style="margin-bottom: var(--space-md); text-align: left;">
+                <h3 style="font-size: var(--font-size-sm); color: var(--color-burgundy-primary); margin-bottom: 0.5rem;">
+                  📜 Ikrar Tamu Undangan DISCO XIV:
+                </h3>
+                <p style="font-size: 0.88rem; line-height: 1.6; color: var(--color-text-dark); margin-bottom: 0.5rem;">
+                  1. Saya menyatakan bersedia hadir dan berpartisipasi aktif dalam seluruh rangkaian DISCO XIV (ECHO, DISTALK, Outbound Villa, dan Malam Apresiasi).
+                </p>
+                <p style="font-size: 0.88rem; line-height: 1.6; color: var(--color-text-dark); margin-bottom: 0.5rem;">
+                  2. Saya akan senantiasa menjunjung tinggi nilai persaudaraan, saling menghormati, menjaga etika, serta menjaga kebersihan dan ketertiban area villa.
+                </p>
+                <p style="font-size: 0.88rem; line-height: 1.6; color: var(--color-text-dark);">
+                  3. Seluruh informasi yang saya isikan pada surat balasan ini adalah benar dan dapat dipertanggungjawabkan.
+                </p>
+              </div>
+
+              <!-- Agreement Checkbox -->
+              <div class="form-group" style="text-align: left;">
+                <label style="display: flex; align-items: flex-start; gap: var(--space-xs); font-size: 0.88rem; color: var(--color-text-dark); cursor: pointer;">
+                  <input type="checkbox" id="reg-agree" name="agree" required style="margin-top: 4px;">
+                  <span>Saya telah membaca dan menyetujui seluruh ikrar perjamuan kehormatan di atas dengan kesadaran penuh.</span>
+                </label>
+              </div>
+
+              <!-- Navigation: Back to Step 2 or Submit/Seal -->
+              <div class="form-actions">
+                <label for="step-2" class="btn-royal-outline">
+                  <span aria-hidden="true">&larr;</span>
+                  <span>Periksa Kembali</span>
+                </label>
+                <!-- Click sends to the pure CSS success panel -->
+                <label for="step-success" class="btn-royal">
+                  <span>Kirim Jawaban Undangan (RSVP)</span>
+                  <span aria-hidden="true">💌</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- ==========================================================
+                 FINAL STATE: Wax Seal Celebration & Acceptance State
+                 ========================================================== -->
+            <div class="step-panel panel-step-success">
+              <div class="success-seal-wrap">
+                <!-- Stamped Wax Seal with CSS Slam Animation -->
+                <img src="assets/ornaments/wax-seal.svg" alt="Segel Emas DISCO XIV Resmi Diterima" class="wax-seal-stamp" width="120" height="120">
+
+                <span class="eyebrow">Balasan Terverifikasi</span>
+                <h2 style="color: var(--color-burgundy-primary); font-size: var(--font-size-xl); margin-bottom: var(--space-xs);">
+                  Undangan Anda Telah Diterima!
+                </h2>
+                <p class="section-subtitle">
+                  Surat balasan resmi Anda telah tersegel rapi di Aula Agung DISCO XIV.
+                </p>
+                <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+                <p style="color: var(--color-text-dark); max-width: 560px; margin-inline: auto; margin-bottom: var(--space-xl); font-size: 0.95rem; line-height: 1.7;">
+                  Terima kasih telah menyambut jamuan agung kami. Rincian pengelompokan regu, pengumuman divisi, serta panduan perlengkapan outbound menuju villa akan kami kirimkan ke email mahasiswa Anda. Sampai jumpa di meja jamuan!
+                </p>
+
+                <div style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;">
+                  <a href="index.html" class="btn-royal">
+                    <span>Kembali ke Beranda</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                  <a href="divisi.html" class="btn-royal-outline">
+                    <span>Jelajahi Divisi Lain</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </article>
+    </div>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Left: Address & Mascot Badge -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <span aria-hidden="true">🏰</span>
+            <span>Alamat Sekretariat</span>
+          </h3>
+          <address class="footer-address">
+            <strong>HIMSI UMN</strong><br>
+            Universitas Multimedia Nusantara<br>
+            Jl. Scientia Boulevard, Gading Serpong<br>
+            Tangerang, Banten 15811
+          </address>
+          <a href="index.html" aria-label="Kembali ke atas dengan Sir Disco">
+            <img src="assets/mascot-badge.svg" alt="Lencana Sir Disco Maskot Resmi" class="footer-mascot-badge" width="68" height="68">
+          </a>
+        </div>
+
+        <!-- Center: Crest Logo, Tagline, Copyright -->
+        <div class="footer-center">
+          <img src="assets/logo-disco-xiv.svg" alt="Logo Crest DISCO XIV" class="footer-logo" width="90" height="78">
+          <p class="footer-tagline">"Satu Meja, Berjuta Cerita"</p>
+          <div class="footer-hashtag">#SatuMejaBerjutaCerita</div>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+        </div>
+
+        <!-- Right: Social Media -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <span aria-hidden="true">📜</span>
+            <span>Media Sosial</span>
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--color-parchment-border); margin-bottom: 0.75rem;">
+            Ikuti warta dan perkembangan terbaru jamuan agung DISCO XIV:
+          </p>
+          <a href="https://instagram.com/discoumn_si" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Kunjungi Instagram Resmi @discoumn_si">
+            <span aria-hidden="true">📷</span>
+            <span>@discoumn_si</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="footer-copyright">
+        <p>&copy; 2027 D'Information System Community Outbound. Seluruh hak cipta dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

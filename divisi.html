@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Divisi Kepanitiaan DISCO XIV - Meja Jamuan Agung Interaktif: Kenali 9 pilar divisi kurator jamuan keakraban outbound HIMSI UMN di villa.">
+  <title>Divisi Jamuan Agung - DISCO XIV | HIMSI UMN</title>
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Core CSS Files -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo-disco-xiv.svg">
+</head>
+<body>
+  <!-- Accessible Skip to Content -->
+  <a href="#main-content" class="skip-to-content">Lewati ke konten utama</a>
+
+  <!-- Mobile Nav Checkbox Hack -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Buka navigasi menu">
+
+  <!-- Floating Pill Navbar -->
+  <header class="site-header">
+    <nav class="navbar-pill" aria-label="Navigasi Utama">
+      <!-- Left: Logo & Title -->
+      <a href="index.html" class="navbar-brand" aria-label="Beranda DISCO XIV">
+        <img src="assets/logo-disco-xiv.svg" alt="Logo Crest DISCO XIV" class="navbar-logo-img" width="42" height="42">
+        <span class="navbar-title-text">DISCO XIV</span>
+      </a>
+
+      <!-- Center: Navigation Pill Links -->
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="nav-pill-link">Beranda</a></li>
+        <li><a href="divisi.html" class="nav-pill-link active" aria-current="page">Divisi</a></li>
+        <li><a href="masuk.html" class="nav-pill-link">Masuk</a></li>
+        <li><a href="daftar.html" class="nav-pill-link">Daftar</a></li>
+      </ul>
+
+      <!-- Right: Language Selector Pill -->
+      <div class="navbar-lang-pill" aria-label="Pilih Bahasa">
+        <a href="divisi.html" class="lang-switch-btn active" aria-label="Bahasa Indonesia (Aktif)">ID</a>
+        <a href="en/divisi.html" class="lang-switch-btn" aria-label="Switch to English">EN</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Buka atau tutup menu navigasi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="divisions-page-wrap">
+    <div class="container divisions-showcase">
+      <!-- Page Header -->
+      <div class="section-title-wrap">
+        <span class="eyebrow">Kurator &amp; Arsitek Jamuan Kerajaan</span>
+        <h1 class="text-gold-gradient">Meja Jamuan Divisi DISCO XIV</h1>
+        <div class="gold-divider" aria-hidden="true"></div>
+        <p class="section-subtitle">
+          <em>"Satu Meja, Berjuta Cerita"</em> — Putar meja jamuan agung atau sentuh salah satu piring kehormatan untuk mengenali para pilar kurator perjamuan kami.
+        </p>
+      </div>
+
+      <!-- ====================================================================
+           PURE CSS INTERACTIVE SELECTION SYSTEM
+           Hidden Radios for Active Seat & Spin Control
+           ==================================================================== -->
+      <input type="radio" name="banquet-division" id="seat-bph" class="seat-radio" checked>
+      <input type="radio" name="banquet-division" id="seat-acara" class="seat-radio">
+      <input type="radio" name="banquet-division" id="seat-regis" class="seat-radio">
+      <input type="radio" name="banquet-division" id="seat-humas" class="seat-radio">
+      <input type="radio" name="banquet-division" id="seat-sponsorship" class="seat-radio">
+      <input type="radio" name="banquet-division" id="seat-dokvis" class="seat-radio">
+      <input type="radio" name="banquet-division" id="seat-perkap" class="seat-radio">
+      <input type="radio" name="banquet-division" id="seat-konsumsi" class="seat-radio">
+      <input type="radio" name="banquet-division" id="seat-k3" class="seat-radio">
+
+      <input type="checkbox" id="toggle-spin" class="spin-toggle-checkbox">
+
+      <!-- Table Controls Bar -->
+      <div class="table-controls-bar" aria-label="Navigasi Kursi Jamuan">
+        <!-- Spin / Pause Toggle Button -->
+        <label for="toggle-spin" class="spin-toggle-label" title="Klik untuk menjeda atau memutar putaran meja jamuan">
+          <span aria-hidden="true">🔄</span>
+          <span>Putar / Jeda Meja</span>
+        </label>
+
+        <!-- Quick Division Selector Tabs -->
+        <label for="seat-bph" class="seat-tab-label tab-bph">BPH</label>
+        <label for="seat-acara" class="seat-tab-label tab-acara">Acara</label>
+        <label for="seat-regis" class="seat-tab-label tab-regis">Registrasi &amp; PIC</label>
+        <label for="seat-humas" class="seat-tab-label tab-humas">Humas</label>
+        <label for="seat-sponsorship" class="seat-tab-label tab-sponsorship">Sponsorship</label>
+        <label for="seat-dokvis" class="seat-tab-label tab-dokvis">Dokvis</label>
+        <label for="seat-perkap" class="seat-tab-label tab-perkap">Perlengkapan</label>
+        <label for="seat-konsumsi" class="seat-tab-label tab-konsumsi">Konsumsi</label>
+        <label for="seat-k3" class="seat-tab-label tab-k3">K3 &amp; Keamanan</label>
+      </div>
+
+      <!-- ====================================================================
+           THE ROYAL ROUND BANQUET TABLE ARENA
+           Grand rotating banquet table with 9 charger plates & centerpiece
+           ==================================================================== -->
+      <section class="table-stage-arena" aria-label="Visualisasi Meja Bundar Jamuan Kerajaan">
+        <div class="table-wrapper">
+          <!-- Centerpiece Platter (DISCO XIV Royal Crest & Sir Disco) -->
+          <div class="table-centerpiece">
+            <img src="assets/logo-disco-xiv.svg" alt="DISCO XIV Centerpiece Crest" class="table-centerpiece-logo" width="80" height="70">
+            <span class="table-centerpiece-title">DISCO XIV</span>
+            <span class="table-centerpiece-motto">Satu Meja, Berjuta Cerita</span>
+          </div>
+
+          <!-- Rotating Orbit Ring with 9 Division Charger Plates -->
+          <div class="table-orbit-ring">
+            <!-- 1. BPH (Badan Pengurus Harian & Sekben) -->
+            <label for="seat-bph" class="table-seat-plate plate-bph" title="Pilih Kursi BPH (Badan Pengurus Harian)">
+              <span class="plate-inner">
+                <!-- Royal Sun & Quill Crest SVG -->
+                <svg class="plate-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="24" cy="24" r="11" fill="url(#goldGradientIcon)" stroke="#8C6A22" stroke-width="1.5"/>
+                  <!-- Sun rays -->
+                  <path d="M24 6v4M24 38v4M6 24h4M38 24h4M11 11l3 3M34 34l3 3M11 37l3-3M34 14l3-3" stroke="#C9A24B" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Feather Quill & Scroll -->
+                  <path d="M20 28l7-10c1-1 3 0 2 2l-4 7v3l-5-2z" fill="#4A0E1B"/>
+                  <defs><linearGradient id="goldGradientIcon" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#F4E7C5"/><stop offset="1" stop-color="#C9A24B"/></linearGradient></defs>
+                </svg>
+                <span class="plate-title-text">BPH</span>
+              </span>
+            </label>
+
+            <!-- 2. Acara (Program & Rundown) -->
+            <label for="seat-acara" class="table-seat-plate plate-acara" title="Pilih Kursi Divisi Acara">
+              <span class="plate-inner">
+                <!-- Royal Harp & Goblet SVG -->
+                <svg class="plate-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="24" cy="24" r="18" fill="rgba(74, 14, 27, 0.1)"/>
+                  <path d="M16 12h16c0 10-6 16-8 22h-8c-2-6-8-12-8-22h8z" fill="#FAF6EE" stroke="#C9A24B" stroke-width="1.5"/>
+                  <path d="M21 16v12M24 16v14M27 16v12" stroke="#8C6A22" stroke-width="1.2" stroke-linecap="round"/>
+                  <circle cx="24" cy="11" r="3" fill="#C9A24B"/>
+                </svg>
+                <span class="plate-title-text">Acara</span>
+              </span>
+            </label>
+
+            <!-- 3. Registrasi & PIC -->
+            <label for="seat-regis" class="table-seat-plate plate-regis" title="Pilih Kursi Registrasi & PIC">
+              <span class="plate-inner">
+                <!-- Royal Invitation Scroll SVG -->
+                <svg class="plate-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M14 10h18c2 0 4 2 4 4v20c0 2-2 4-4 4H14c-2 0-4-2-4-4V14c0-2 2-4 4-4z" fill="#FAF6EE" stroke="#C9A24B" stroke-width="1.5"/>
+                  <path d="M16 16h14M16 22h14M16 28h10" stroke="#4A0E1B" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="32" cy="32" r="4.5" fill="#8C1C2D"/>
+                </svg>
+                <span class="plate-title-text">Registrasi</span>
+              </span>
+            </label>
+
+            <!-- 4. Humas (Public Relation) -->
+            <label for="seat-humas" class="table-seat-plate plate-humas" title="Pilih Kursi Divisi Humas">
+              <span class="plate-inner">
+                <!-- Royal Herald Horn / Megaphone SVG -->
+                <svg class="plate-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12 28v-8l18-7v22l-18-7z" fill="url(#goldGradientIcon)" stroke="#8C6A22" stroke-width="1.5"/>
+                  <path d="M8 20h4v8H8c-1.5 0-2-1-2-4s.5-4 2-4z" fill="#4A0E1B"/>
+                  <path d="M34 18c3 2 4 4 4 6s-1 4-4 6" stroke="#C9A24B" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="plate-title-text">Humas</span>
+              </span>
+            </label>
+
+            <!-- 5. Funding (Sponsorship) -->
+            <label for="seat-sponsorship" class="table-seat-plate plate-sponsorship" title="Pilih Kursi Divisi Sponsorship & Funding">
+              <span class="plate-inner">
+                <!-- Royal Scales of Treasury SVG -->
+                <svg class="plate-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M24 10v26M18 36h12M12 16h24" stroke="#8C6A22" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Left scale pan -->
+                  <path d="M12 16l-4 8h8l-4-8z" fill="#C9A24B" stroke="#4A0E1B" stroke-width="1.2"/>
+                  <!-- Right scale pan -->
+                  <path d="M36 16l-4 8h8l-4-8z" fill="#C9A24B" stroke="#4A0E1B" stroke-width="1.2"/>
+                  <circle cx="24" cy="10" r="2.5" fill="#4A0E1B"/>
+                </svg>
+                <span class="plate-title-text">Funding</span>
+              </span>
+            </label>
+
+            <!-- 6. Dokumentasi & Visual (Dokvis) -->
+            <label for="seat-dokvis" class="table-seat-plate plate-dokvis" title="Pilih Kursi Dokumentasi & Visual">
+              <span class="plate-inner">
+                <!-- Royal Golden Eye & Aperture SVG -->
+                <svg class="plate-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M8 24C12 15 36 15 40 24C36 33 12 33 8 24Z" fill="#FAF6EE" stroke="#8C6A22" stroke-width="2"/>
+                  <circle cx="24" cy="24" r="7" fill="url(#goldGradientIcon)" stroke="#4A0E1B" stroke-width="1.5"/>
+                  <circle cx="24" cy="24" r="3.5" fill="#4A0E1B"/>
+                  <circle cx="26" cy="22" r="1.2" fill="#FFFFFF"/>
+                </svg>
+                <span class="plate-title-text">Dokvis</span>
+              </span>
+            </label>
+
+            <!-- 7. Perlengkapan (Logistics & Stage) -->
+            <label for="seat-perkap" class="table-seat-plate plate-perkap" title="Pilih Kursi Divisi Perlengkapan">
+              <span class="plate-inner">
+                <!-- Royal Stage Lantern & Tools SVG -->
+                <svg class="plate-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M18 16h12l3 16H15l3-16z" fill="#FAF6EE" stroke="#8C6A22" stroke-width="1.5"/>
+                  <path d="M21 16V10h6v6M18 32v6M30 32v6" stroke="#4A0E1B" stroke-width="1.8"/>
+                  <circle cx="24" cy="24" r="3" fill="#C9A24B"/>
+                </svg>
+                <span class="plate-title-text">Perkap</span>
+              </span>
+            </label>
+
+            <!-- 8. Konsumsi (Catering & Feast) -->
+            <label for="seat-konsumsi" class="table-seat-plate plate-konsumsi" title="Pilih Kursi Divisi Konsumsi">
+              <span class="plate-inner">
+                <!-- Royal Cloche & Cutlery SVG -->
+                <svg class="plate-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <ellipse cx="24" cy="32" rx="14" ry="3.5" fill="#FAF6EE" stroke="#8C6A22" stroke-width="1.5"/>
+                  <path d="M13 32C13 22 35 22 35 32Z" fill="url(#goldGradientIcon)" stroke="#8C6A22" stroke-width="1.5"/>
+                  <circle cx="24" cy="20" r="2.5" fill="#4A0E1B"/>
+                </svg>
+                <span class="plate-title-text">Konsumsi</span>
+              </span>
+            </label>
+
+            <!-- 9. Keamanan & Transportasi (K3) -->
+            <label for="seat-k3" class="table-seat-plate plate-k3" title="Pilih Kursi Kesehatan & Keamanan (K3)">
+              <span class="plate-inner">
+                <!-- Royal Knight Shield & Cross SVG -->
+                <svg class="plate-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M24 8L36 12V24C36 32 24 38 24 38C24 38 12 32 12 24V12L24 8Z" fill="#FAF6EE" stroke="#8C6A22" stroke-width="2"/>
+                  <path d="M24 16v14M17 23h14" stroke="#8C1C2D" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <span class="plate-title-text">Kamtrap</span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             SPOTLIGHT COURSE CARD
+             Displays the active division details in pure CSS based on checked radio
+             ==================================================================== -->
+        <div class="spotlight-deck" aria-live="polite">
+          <!-- 1. Spotlight BPH -->
+          <article class="spotlight-card spotlight-bph">
+            <!-- Ornaments -->
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+            <div class="spotlight-header">
+              <span class="spotlight-badge">Pilar Kehormatan • Tata Kelola</span>
+              <h2 class="spotlight-title">Badan Pengurus Harian (BPH)</h2>
+              <p class="spotlight-subtitle">"The Royal Chancellery &amp; Grand Treasury"</p>
+              <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+            </div>
+            <p class="spotlight-prose">
+              Kanselir kepemimpinan agung yang membina sinergi seluruh divisi, menjaga ketertiban administrasi persuratan resmi universitas, serta memastikan akuntabilitas tata kelola keuangan jamuan DISCO XIV berjalan dengan integritas mutlak.
+            </p>
+            <div class="spotlight-nav-actions">
+              <label for="seat-k3" class="btn-royal-outline btn-royal-sm">&larr; Kamtrap</label>
+              <a href="#modal-bph" class="btn-royal" aria-haspopup="dialog">Lihat Detail Lengkap &rarr;</a>
+              <label for="seat-acara" class="btn-royal-outline btn-royal-sm">Acara &rarr;</label>
+            </div>
+          </article>
+
+          <!-- 2. Spotlight Acara -->
+          <article class="spotlight-card spotlight-acara">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+            <div class="spotlight-header">
+              <span class="spotlight-badge">Pilar I • Konsep &amp; Alur</span>
+              <h2 class="spotlight-title">Divisi Acara</h2>
+              <p class="spotlight-subtitle">"The Grand Feast Masterminds"</p>
+              <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+            </div>
+            <p class="spotlight-prose">
+              Arsitek perjamuan yang merancang alur kebersamaan magis: mulai dari kegiatan kepedulian ECHO, seminar pembekalan DISTALK, perancangan game kolaboratif outbound, hingga puncaknya malam keakraban api unggun di villa pegunungan.
+            </p>
+            <div class="spotlight-nav-actions">
+              <label for="seat-bph" class="btn-royal-outline btn-royal-sm">&larr; BPH</label>
+              <a href="#modal-acara" class="btn-royal" aria-haspopup="dialog">Lihat Detail Lengkap &rarr;</a>
+              <label for="seat-regis" class="btn-royal-outline btn-royal-sm">Registrasi &rarr;</label>
+            </div>
+          </article>
+
+          <!-- 3. Spotlight Registrasi & PIC -->
+          <article class="spotlight-card spotlight-regis">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+            <div class="spotlight-header">
+              <span class="spotlight-badge">Pilar II • Sambutan Tamu</span>
+              <h2 class="spotlight-title">Registrasi &amp; PIC</h2>
+              <p class="spotlight-subtitle">"The Royal Guest Reception &amp; Liaison"</p>
+              <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+            </div>
+            <p class="spotlight-prose">
+              Garda pertama penyambut tamu bangsawan yang mengelola verifikasi tiket undangan, pembagian kamar villa, pendataan kehadiran seluruh angkatan, serta mendampingi kelompok regu peserta selama outbound berlangsung.
+            </p>
+            <div class="spotlight-nav-actions">
+              <label for="seat-acara" class="btn-royal-outline btn-royal-sm">&larr; Acara</label>
+              <a href="#modal-regis" class="btn-royal" aria-haspopup="dialog">Lihat Detail Lengkap &rarr;</a>
+              <label for="seat-humas" class="btn-royal-outline btn-royal-sm">Humas &rarr;</label>
+            </div>
+          </article>
+
+          <!-- 4. Spotlight Humas -->
+          <article class="spotlight-card spotlight-humas">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+            <div class="spotlight-header">
+              <span class="spotlight-badge">Pilar III • Duta Relasi</span>
+              <h2 class="spotlight-title">Divisi Humas (Public Relation)</h2>
+              <p class="spotlight-subtitle">"The Court Ambassadors &amp; Heralds"</p>
+              <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+            </div>
+            <p class="spotlight-prose">
+              Duta komunikasi kerajaan yang menjembatani hubungan antara panitia, mahasiswa lintas angkatan, perizinan kampus UMN, orang tua, hingga pengelola villa dengan tutur kata yang santun, hangat, dan profesional.
+            </p>
+            <div class="spotlight-nav-actions">
+              <label for="seat-regis" class="btn-royal-outline btn-royal-sm">&larr; Registrasi</label>
+              <a href="#modal-humas" class="btn-royal" aria-haspopup="dialog">Lihat Detail Lengkap &rarr;</a>
+              <label for="seat-sponsorship" class="btn-royal-outline btn-royal-sm">Funding &rarr;</label>
+            </div>
+          </article>
+
+          <!-- 5. Spotlight Sponsorship -->
+          <article class="spotlight-card spotlight-sponsorship">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+            <div class="spotlight-header">
+              <span class="spotlight-badge">Pilar IV • Kemitraan &amp; Dana</span>
+              <h2 class="spotlight-title">Divisi Sponsorship &amp; Funding</h2>
+              <p class="spotlight-subtitle">"The Royal Treasury Alliances"</p>
+              <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+            </div>
+            <p class="spotlight-prose">
+              Penggalang dukungan dan persekutuan ekonomi kerajaan yang merancang proposal kemitraan korporat, melakukan pitching sponsor profesional, dan mengelola dana usaha guna memastikan jamuan perhelatan terselenggara megah.
+            </p>
+            <div class="spotlight-nav-actions">
+              <label for="seat-humas" class="btn-royal-outline btn-royal-sm">&larr; Humas</label>
+              <a href="#modal-sponsorship" class="btn-royal" aria-haspopup="dialog">Lihat Detail Lengkap &rarr;</a>
+              <label for="seat-dokvis" class="btn-royal-outline btn-royal-sm">Dokvis &rarr;</label>
+            </div>
+          </article>
+
+          <!-- 6. Spotlight Dokvis -->
+          <article class="spotlight-card spotlight-dokvis">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+            <div class="spotlight-header">
+              <span class="spotlight-badge">Pilar V • Visual &amp; Media</span>
+              <h2 class="spotlight-title">Dokumentasi &amp; Visual (Dokvis)</h2>
+              <p class="spotlight-subtitle">"The Court Chroniclers &amp; Artists"</p>
+              <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+            </div>
+            <p class="spotlight-prose">
+              Pencatat sejarah visual kerajaan yang merancang seluruh identitas desain grafis bertema royal vintage, mengabadikan setiap senyum dan jerih payah dalam lensa sinematik, serta meramu video kilas balik (aftermovie) agung.
+            </p>
+            <div class="spotlight-nav-actions">
+              <label for="seat-sponsorship" class="btn-royal-outline btn-royal-sm">&larr; Funding</label>
+              <a href="#modal-dokvis" class="btn-royal" aria-haspopup="dialog">Lihat Detail Lengkap &rarr;</a>
+              <label for="seat-perkap" class="btn-royal-outline btn-royal-sm">Perkap &rarr;</label>
+            </div>
+          </article>
+
+          <!-- 7. Spotlight Perkap -->
+          <article class="spotlight-card spotlight-perkap">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+            <div class="spotlight-header">
+              <span class="spotlight-badge">Pilar VI • Logistik &amp; Panggung</span>
+              <h2 class="spotlight-title">Divisi Perlengkapan</h2>
+              <p class="spotlight-subtitle">"The Grand Stage &amp; Armoury Masters"</p>
+              <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+            </div>
+            <p class="spotlight-prose">
+              Ksatria penyedia infrastruktur fisik dan teknis: panggung utama, tata lampu temaram, sound system menggelegar, penataan kayu bakar perapian api unggun, serta logistik seluruh tantangan outbound di alam terbuka.
+            </p>
+            <div class="spotlight-nav-actions">
+              <label for="seat-dokvis" class="btn-royal-outline btn-royal-sm">&larr; Dokvis</label>
+              <a href="#modal-perlengkapan" class="btn-royal" aria-haspopup="dialog">Lihat Detail Lengkap &rarr;</a>
+              <label for="seat-konsumsi" class="btn-royal-outline btn-royal-sm">Konsumsi &rarr;</label>
+            </div>
+          </article>
+
+          <!-- 8. Spotlight Konsumsi -->
+          <article class="spotlight-card spotlight-konsumsi">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+            <div class="spotlight-header">
+              <span class="spotlight-badge">Pilar VII • Katering &amp; Jamuan</span>
+              <h2 class="spotlight-title">Divisi Konsumsi</h2>
+              <p class="spotlight-subtitle">"The Royal Banquet Curators"</p>
+              <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+            </div>
+            <p class="spotlight-prose">
+              Koki dan kurator kuliner yang menyajikan santapan lezat bergizi bagi ratusan tamu bangsawan dan panitia: katering utama lezat, kudapan istimewa, serta wedang hangat pengusir hawa dingin malam villa.
+            </p>
+            <div class="spotlight-nav-actions">
+              <label for="seat-perkap" class="btn-royal-outline btn-royal-sm">&larr; Perkap</label>
+              <a href="#modal-konsumsi" class="btn-royal" aria-haspopup="dialog">Lihat Detail Lengkap &rarr;</a>
+              <label for="seat-k3" class="btn-royal-outline btn-royal-sm">Kamtrap &rarr;</label>
+            </div>
+          </article>
+
+          <!-- 9. Spotlight K3 -->
+          <article class="spotlight-card spotlight-k3">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+            <img src="assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+            <div class="spotlight-header">
+              <span class="spotlight-badge">Pilar VIII • Garda K3 &amp; Keamanan</span>
+              <h2 class="spotlight-title">Keamanan &amp; Transportasi (K3)</h2>
+              <p class="spotlight-subtitle">"The Royal Knights, Caretakers &amp; Fleet"</p>
+              <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+            </div>
+            <p class="spotlight-prose">
+              Garda pelindung keselamatan yang siaga medis dengan posko P3K, mengawal keamanan lingkungan villa sepanjang malam, mengatur iring-iringan armada bus penjemputan, dan menjaga ketertiban suasana jamuan.
+            </p>
+            <div class="spotlight-nav-actions">
+              <label for="seat-konsumsi" class="btn-royal-outline btn-royal-sm">&larr; Konsumsi</label>
+              <a href="#modal-k3" class="btn-royal" aria-haspopup="dialog">Lihat Detail Lengkap &rarr;</a>
+              <label for="seat-bph" class="btn-royal-outline btn-royal-sm">BPH &rarr;</label>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECONDARY GRID OF ALL DIVISIONS
+           For effortless side-by-side catalog comparison
+           ==================================================================== -->
+      <section class="divisions-grid-section scroll-reveal" aria-labelledby="all-divisions-title">
+        <div class="section-title-wrap">
+          <span class="eyebrow">Daftar Lengkap Divisi</span>
+          <h2 id="all-divisions-title">Seluruh Pilar Kepanitiaan</h2>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+        </div>
+
+        <div class="divisions-grid">
+          <!-- Card 1: BPH -->
+          <article class="division-menu-card">
+            <div class="division-crest-icon" aria-hidden="true">📜</div>
+            <div class="division-course-tag">Pilar Kehormatan</div>
+            <h3 class="division-card-title">BPH &amp; Tata Usaha</h3>
+            <p class="division-card-desc">
+              Kanselir kepemimpinan yang mengoordinasikan seluruh panitia, administrasi proposal resmi, dan perbendaharaan kas kegiatan.
+            </p>
+            <a href="#modal-bph" class="btn-royal-outline btn-royal-sm" aria-haspopup="dialog">Lihat Detail &rarr;</a>
+          </article>
+
+          <!-- Card 2: Acara -->
+          <article class="division-menu-card">
+            <div class="division-crest-icon" aria-hidden="true">🎭</div>
+            <div class="division-course-tag">Pilar I • Program</div>
+            <h3 class="division-card-title">Divisi Acara</h3>
+            <p class="division-card-desc">
+              Merancang alur magis perjamuan: tema, rundown, outbound games kolaboratif, hingga malam puncak keakraban di villa.
+            </p>
+            <a href="#modal-acara" class="btn-royal-outline btn-royal-sm" aria-haspopup="dialog">Lihat Detail &rarr;</a>
+          </article>
+
+          <!-- Card 3: Registrasi & PIC -->
+          <article class="division-menu-card">
+            <div class="division-crest-icon" aria-hidden="true">🎫</div>
+            <div class="division-course-tag">Pilar II • Resepsi</div>
+            <h3 class="division-card-title">Registrasi &amp; PIC</h3>
+            <p class="division-card-desc">
+              Penyambut tamu kehormatan, pengelola data registrasi, penataan kamar villa, serta pendamping regu selama kegiatan.
+            </p>
+            <a href="#modal-regis" class="btn-royal-outline btn-royal-sm" aria-haspopup="dialog">Lihat Detail &rarr;</a>
+          </article>
+
+          <!-- Card 4: Humas -->
+          <article class="division-menu-card">
+            <div class="division-crest-icon" aria-hidden="true">📯</div>
+            <div class="division-course-tag">Pilar III • Relasi</div>
+            <h3 class="division-card-title">Divisi Humas</h3>
+            <p class="division-card-desc">
+              Duta komunikasi kerajaan yang menjembatani panitia dengan peserta lintas angkatan, dosen, orang tua, dan pengelola villa.
+            </p>
+            <a href="#modal-humas" class="btn-royal-outline btn-royal-sm" aria-haspopup="dialog">Lihat Detail &rarr;</a>
+          </article>
+
+          <!-- Card 5: Sponsorship -->
+          <article class="division-menu-card">
+            <div class="division-crest-icon" aria-hidden="true">💎</div>
+            <div class="division-course-tag">Pilar IV • Kemitraan</div>
+            <h3 class="division-card-title">Sponsorship &amp; Dana</h3>
+            <p class="division-card-desc">
+              Membangun kerjasama strategis dengan sponsor korporat dan donatur untuk menyokong kemegahan acara outbound.
+            </p>
+            <a href="#modal-sponsorship" class="btn-royal-outline btn-royal-sm" aria-haspopup="dialog">Lihat Detail &rarr;</a>
+          </article>
+
+          <!-- Card 6: Dokvis -->
+          <article class="division-menu-card">
+            <div class="division-crest-icon" aria-hidden="true">📸</div>
+            <div class="division-course-tag">Pilar V • Media</div>
+            <h3 class="division-card-title">Dokumentasi &amp; Visual</h3>
+            <p class="division-card-desc">
+              Mengabadikan memori kebersamaan dalam visual sinematik, desain identitas kerajaan, dan produksi film kilas balik.
+            </p>
+            <a href="#modal-dokvis" class="btn-royal-outline btn-royal-sm" aria-haspopup="dialog">Lihat Detail &rarr;</a>
+          </article>
+
+          <!-- Card 7: Perlengkapan -->
+          <article class="division-menu-card">
+            <div class="division-crest-icon" aria-hidden="true">⚙️</div>
+            <div class="division-course-tag">Pilar VI • Logistik</div>
+            <h3 class="division-card-title">Divisi Perlengkapan</h3>
+            <p class="division-card-desc">
+              Penyedia infrastruktur fisik: panggung, sound system, tata pencahayaan temaram, hingga kesiapan api unggun villa.
+            </p>
+            <a href="#modal-perlengkapan" class="btn-royal-outline btn-royal-sm" aria-haspopup="dialog">Lihat Detail &rarr;</a>
+          </article>
+
+          <!-- Card 8: Konsumsi -->
+          <article class="division-menu-card">
+            <div class="division-crest-icon" aria-hidden="true">🍽️</div>
+            <div class="division-course-tag">Pilar VII • Jamuan</div>
+            <h3 class="division-card-title">Divisi Konsumsi</h3>
+            <p class="division-card-desc">
+              Menyajikan hidangan katering bernutrisi, camilan sore, dan minuman hangat sepanjang 3 hari 2 malam di villa.
+            </p>
+            <a href="#modal-konsumsi" class="btn-royal-outline btn-royal-sm" aria-haspopup="dialog">Lihat Detail &rarr;</a>
+          </article>
+
+          <!-- Card 9: Kamtrap / K3 -->
+          <article class="division-menu-card">
+            <div class="division-crest-icon" aria-hidden="true">🛡️</div>
+            <div class="division-course-tag">Pilar VIII • Perlindungan</div>
+            <h3 class="division-card-title">Keamanan &amp; Transport</h3>
+            <p class="division-card-desc">
+              Garda pelindung medis pertolongan pertama, patroli keamanan villa, dan komando armada transportasi bus peserta.
+            </p>
+            <a href="#modal-k3" class="btn-royal-outline btn-royal-sm" aria-haspopup="dialog">Lihat Detail &rarr;</a>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ====================================================================
+       PURE CSS :target MODALS (Full Division Criteria & Details)
+       ==================================================================== -->
+
+  <!-- 1. Modal BPH -->
+  <div id="modal-bph" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-bph-title">
+    <div class="modal-card">
+      <a href="#" class="modal-close" aria-label="Tutup rincian modal">&times;</a>
+      <div class="modal-header">
+        <span class="modal-course-badge">Pilar Kehormatan • Tata Kelola</span>
+        <h3 id="modal-bph-title" class="modal-title">Badan Pengurus Harian (BPH)</h3>
+        <p class="modal-subtitle">"The Royal Chancellery &amp; Grand Treasury"</p>
+      </div>
+      <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+      <h4 class="modal-section-title">Peran &amp; Tanggung Jawab</h4>
+      <ul class="modal-list">
+        <li>Memimpin koordinasi strategis antarseluruh divisi demi kelancaran visi acara.</li>
+        <li>Mengelola perizinan kampus UMN, surat resmi rektorat, dan pembukuan arus kas jamuan.</li>
+        <li>Menyusun Laporan Pertanggungjawaban (LPJ) resmi DISCO XIV.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Kriteria Anggota</h4>
+      <ul class="modal-list">
+        <li>Disiplin, bertanggung jawab, berintegritas tinggi, dan memiliki jiwa kepemimpinan.</li>
+        <li>Memahami tata tertib administrasi dan pencatatan keuangan akuntabel.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Pengalaman yang Dipelajari</h4>
+      <ul class="modal-list">
+        <li>Kepemimpinan organisasi tingkat tinggi, tata kelola audit keuangan, dan diplomasi institusional.</li>
+      </ul>
+
+      <div class="form-actions" style="margin-top: var(--space-lg);">
+        <a href="#" class="btn-royal-outline">Tutup Rincian</a>
+        <a href="daftar.html" class="btn-royal">Pilih Divisi Ini &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Modal Acara -->
+  <div id="modal-acara" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-acara-title">
+    <div class="modal-card">
+      <a href="#" class="modal-close" aria-label="Tutup rincian modal">&times;</a>
+      <div class="modal-header">
+        <span class="modal-course-badge">Pilar I • Konsep &amp; Alur</span>
+        <h3 id="modal-acara-title" class="modal-title">Divisi Acara</h3>
+        <p class="modal-subtitle">"The Grand Feast Masterminds"</p>
+      </div>
+      <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+      <h4 class="modal-section-title">Peran &amp; Tanggung Jawab</h4>
+      <ul class="modal-list">
+        <li>Menyusun alur rangkaian acara mulai dari ECHO, DISTALK, hingga 3 hari 2 malam Outbound Villa.</li>
+        <li>Merancang game outbound kolaboratif yang sarat makna kebersamaan dan sportivitas.</li>
+        <li>Mengarahkan Master of Ceremony (MC) dan memastikan ketepatan waktu rundown.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Kriteria Anggota</h4>
+      <ul class="modal-list">
+        <li>Kreatif, adaptif, dan memiliki inisiatif tinggi dalam memecahkan situasi mendadak.</li>
+        <li>Mampu bekerja di bawah tekanan dengan ketelitian manajemen waktu yang baik.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Pengalaman yang Dipelajari</h4>
+      <ul class="modal-list">
+        <li>Keahlian event planning berskala besar, koordinasi panggung, dan manajemen risiko acara.</li>
+      </ul>
+
+      <div class="form-actions" style="margin-top: var(--space-lg);">
+        <a href="#" class="btn-royal-outline">Tutup Rincian</a>
+        <a href="daftar.html" class="btn-royal">Pilih Divisi Ini &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Modal Registrasi & PIC -->
+  <div id="modal-regis" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-regis-title">
+    <div class="modal-card">
+      <a href="#" class="modal-close" aria-label="Tutup rincian modal">&times;</a>
+      <div class="modal-header">
+        <span class="modal-course-badge">Pilar II • Resepsi &amp; Pendampingan</span>
+        <h3 id="modal-regis-title" class="modal-title">Registrasi &amp; Person In Charge (PIC)</h3>
+        <p class="modal-subtitle">"The Royal Guest Reception &amp; Liaison"</p>
+      </div>
+      <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+      <h4 class="modal-section-title">Peran &amp; Tanggung Jawab</h4>
+      <ul class="modal-list">
+        <li>Memvalidasi data kehadiran tamu kehormatan dan mengelola absensi setiap rangkaian acara.</li>
+        <li>Mengatur pembagian kamar villa dan memandu kelompok regu outbound secara aktif.</li>
+        <li>Menjadi tempat bertanya utama peserta mengenai informasi teknis perlengkapan pribadi.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Kriteria Anggota</h4>
+      <ul class="modal-list">
+        <li>Ramah, sabar, peduli sesama, dan cekatan dalam mengelola database peserta.</li>
+        <li>Mampu membangun suasana akrab dan menyemangati kelompok regunya.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Pengalaman yang Dipelajari</h4>
+      <ul class="modal-list">
+        <li>Hospitality management, people facilitation, dan manajemen relasi kelompok besar.</li>
+      </ul>
+
+      <div class="form-actions" style="margin-top: var(--space-lg);">
+        <a href="#" class="btn-royal-outline">Tutup Rincian</a>
+        <a href="daftar.html" class="btn-royal">Pilih Divisi Ini &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Modal Humas -->
+  <div id="modal-humas" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-humas-title">
+    <div class="modal-card">
+      <a href="#" class="modal-close" aria-label="Tutup rincian modal">&times;</a>
+      <div class="modal-header">
+        <span class="modal-course-badge">Pilar III • Duta Komunikasi</span>
+        <h3 id="modal-humas-title" class="modal-title">Divisi Humas (Public Relation)</h3>
+        <p class="modal-subtitle">"The Court Ambassadors &amp; Heralds"</p>
+      </div>
+      <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+      <h4 class="modal-section-title">Peran &amp; Tanggung Jawab</h4>
+      <ul class="modal-list">
+        <li>Menjadi penghubung utama antara panitia dengan mahasiswa peserta, orang tua, dan birokrasi kampus.</li>
+        <li>Melayani pusat bantuan pertanyaan registrasi, pendataan khusus, dan perizinan villa.</li>
+        <li>Membangun ikatan personal yang ramah dan hangat kepada calon tamu kehormatan.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Kriteria Anggota</h4>
+      <ul class="modal-list">
+        <li>Komunikatif, persuasif, santun, dan responsif dalam membalas korespondensi.</li>
+        <li>Memiliki stabilitas emosi yang baik saat menghadapi pertanyaan beragam.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Pengalaman yang Dipelajari</h4>
+      <ul class="modal-list">
+        <li>Public relation excellence, mediasi interpersonal, serta seni diplomasi organisasi.</li>
+      </ul>
+
+      <div class="form-actions" style="margin-top: var(--space-lg);">
+        <a href="#" class="btn-royal-outline">Tutup Rincian</a>
+        <a href="daftar.html" class="btn-royal">Pilih Divisi Ini &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Modal Sponsorship -->
+  <div id="modal-sponsorship" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-sponsorship-title">
+    <div class="modal-card">
+      <a href="#" class="modal-close" aria-label="Tutup rincian modal">&times;</a>
+      <div class="modal-header">
+        <span class="modal-course-badge">Pilar IV • Kemitraan &amp; Dana</span>
+        <h3 id="modal-sponsorship-title" class="modal-title">Divisi Sponsorship &amp; Funding</h3>
+        <p class="modal-subtitle">"The Royal Treasury Alliances"</p>
+      </div>
+      <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+      <h4 class="modal-section-title">Peran &amp; Tanggung Jawab</h4>
+      <ul class="modal-list">
+        <li>Menyusun proposal sponsorship kerajaan yang menarik bagi perusahaan dan instansi mitra.</li>
+        <li>Melakukan pitching kemitraan secara profesional kepada calon sponsor dan media partner.</li>
+        <li>Menjaga pemenuhan kontraprestasi logo dan promosi produk sponsor selama acara.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Kriteria Anggota</h4>
+      <ul class="modal-list">
+        <li>Percaya diri, pantang menyerah, berorientasi target, dan memiliki etika bisnis yang baik.</li>
+        <li>Mampu bernegosiasi dan menyusun kesepakatan kerjasama secara tertulis.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Pengalaman yang Dipelajari</h4>
+      <ul class="modal-list">
+        <li>Business negotiation skill, networking korporat nyata, dan fundraising berskala profesional.</li>
+      </ul>
+
+      <div class="form-actions" style="margin-top: var(--space-lg);">
+        <a href="#" class="btn-royal-outline">Tutup Rincian</a>
+        <a href="daftar.html" class="btn-royal">Pilih Divisi Ini &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Modal Dokvis -->
+  <div id="modal-dokvis" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-dokvis-title">
+    <div class="modal-card">
+      <a href="#" class="modal-close" aria-label="Tutup rincian modal">&times;</a>
+      <div class="modal-header">
+        <span class="modal-course-badge">Pilar V • Visual &amp; Media</span>
+        <h3 id="modal-dokvis-title" class="modal-title">Dokumentasi &amp; Visual (Dokvis)</h3>
+        <p class="modal-subtitle">"The Court Chroniclers &amp; Artists"</p>
+      </div>
+      <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+      <h4 class="modal-section-title">Peran &amp; Tanggung Jawab</h4>
+      <ul class="modal-list">
+        <li>Memproduksi seluruh materi desain visual bertema royal vintage untuk media sosial dan dekorasi panggung.</li>
+        <li>Mengabadikan momen foto dan rekaman video sinematik sepanjang perhelatan outbound di villa.</li>
+        <li>Membuat video kilas balik (aftermovie) agung untuk diputar pada malam apresiasi penutupan.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Kriteria Anggota</h4>
+      <ul class="modal-list">
+        <li>Memiliki apresiasi estetika visual, fotografi, videografi, atau graphic design.</li>
+        <li>Dapat bekerja disiplin dengan tenggat waktu publikasi media digital.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Pengalaman yang Dipelajari</h4>
+      <ul class="modal-list">
+        <li>Kreativitas branding visual, sinematografi acara langsung, dan pengelolaan konten digital.</li>
+      </ul>
+
+      <div class="form-actions" style="margin-top: var(--space-lg);">
+        <a href="#" class="btn-royal-outline">Tutup Rincian</a>
+        <a href="daftar.html" class="btn-royal">Pilih Divisi Ini &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Modal Perlengkapan -->
+  <div id="modal-perlengkapan" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-perlengkapan-title">
+    <div class="modal-card">
+      <a href="#" class="modal-close" aria-label="Tutup rincian modal">&times;</a>
+      <div class="modal-header">
+        <span class="modal-course-badge">Pilar VI • Logistik &amp; Panggung</span>
+        <h3 id="modal-perlengkapan-title" class="modal-title">Divisi Perlengkapan</h3>
+        <p class="modal-subtitle">"The Grand Stage &amp; Armoury Masters"</p>
+      </div>
+      <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+      <h4 class="modal-section-title">Peran &amp; Tanggung Jawab</h4>
+      <ul class="modal-list">
+        <li>Menyiapkan peralatan panggung, tenda, sound system, proyektor, dan tata lampu temaram villa.</li>
+        <li>Mengatur tata letak api unggun, kayu bakar, serta keamanan arena outbound luar ruangan.</li>
+        <li>Mendata inventaris barang secara teliti dari sebelum berangkat hingga kembali ke kampus.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Kriteria Anggota</h4>
+      <ul class="modal-list">
+        <li>Tangguh fisik, cekatan, teliti dalam inventaris, dan menyukai kerja lapangan langsung.</li>
+        <li>Sigap memecahkan kendala teknis kelistrikan dan peralatan panggung.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Pengalaman yang Dipelajari</h4>
+      <ul class="modal-list">
+        <li>Logistik manajemen skala ratusan orang, tata kelola panggung, dan manajemen aset inventaris.</li>
+      </ul>
+
+      <div class="form-actions" style="margin-top: var(--space-lg);">
+        <a href="#" class="btn-royal-outline">Tutup Rincian</a>
+        <a href="daftar.html" class="btn-royal">Pilih Divisi Ini &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Modal Konsumsi -->
+  <div id="modal-konsumsi" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-konsumsi-title">
+    <div class="modal-card">
+      <a href="#" class="modal-close" aria-label="Tutup rincian modal">&times;</a>
+      <div class="modal-header">
+        <span class="modal-course-badge">Pilar VII • Katering &amp; Jamuan</span>
+        <h3 id="modal-konsumsi-title" class="modal-title">Divisi Konsumsi</h3>
+        <p class="modal-subtitle">"The Royal Banquet Curators"</p>
+      </div>
+      <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+      <h4 class="modal-section-title">Peran &amp; Tanggung Jawab</h4>
+      <ul class="modal-list">
+        <li>Menyusun variasi menu makanan berat, kudapan (snack), dan minuman hangat untuk seluruh sesi villa.</li>
+        <li>Mengkoordinasikan vendor katering di sekitar lokasi villa serta mengawasi higienitas sajian.</li>
+        <li>Mendistribusikan konsumsi secara tertib dan sigap bagi ratusan tamu dan panitia.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Kriteria Anggota</h4>
+      <ul class="modal-list">
+        <li>Cekatan, tanggap, dan memiliki rasa kepedulian tinggi terhadap kebutuhan nutrisi orang lain.</li>
+        <li>Memahami manajemen logistik makanan dan ketepatan estimasi porsi.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Pengalaman yang Dipelajari</h4>
+      <ul class="modal-list">
+        <li>Keahlian negosiasi vendor katering, budgeting konsumsi massal, dan operasional layanan prima.</li>
+      </ul>
+
+      <div class="form-actions" style="margin-top: var(--space-lg);">
+        <a href="#" class="btn-royal-outline">Tutup Rincian</a>
+        <a href="daftar.html" class="btn-royal">Pilih Divisi Ini &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. Modal K3 & Kamtrap -->
+  <div id="modal-k3" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-k3-title">
+    <div class="modal-card">
+      <a href="#" class="modal-close" aria-label="Tutup rincian modal">&times;</a>
+      <div class="modal-header">
+        <span class="modal-course-badge">Pilar VIII • Medis, Keamanan &amp; Armada</span>
+        <h3 id="modal-k3-title" class="modal-title">Keamanan &amp; Transportasi (K3)</h3>
+        <p class="modal-subtitle">"The Royal Knights, Caretakers &amp; Fleet"</p>
+      </div>
+      <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+      <h4 class="modal-section-title">Peran &amp; Tanggung Jawab</h4>
+      <ul class="modal-list">
+        <li>Siaga menjaga posko pertolongan pertama (P3K) dan obat-obatan darurat peserta.</li>
+        <li>Menjaga keamanan area villa, ketertiban jam istirahat malam, dan keamanan barang berharga.</li>
+        <li>Mengatur armada transportasi penjemputan dan kepulangan bus peserta dengan selamat.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Kriteria Anggota</h4>
+      <ul class="modal-list">
+        <li>Tenang, waspada, memiliki empati, serta berani mengambil tindakan cepat saat situasi darurat.</li>
+        <li>Disiplin, bertanggung jawab, dan memiliki kepedulian tinggi atas keselamatan sesama.</li>
+      </ul>
+
+      <h4 class="modal-section-title">Pengalaman yang Dipelajari</h4>
+      <ul class="modal-list">
+        <li>Pertolongan medis pertama alam terbuka, manajemen krisis darurat, dan koordinasi armada transportasi.</li>
+      </ul>
+
+      <div class="form-actions" style="margin-top: var(--space-lg);">
+        <a href="#" class="btn-royal-outline">Tutup Rincian</a>
+        <a href="daftar.html" class="btn-royal">Pilih Divisi Ini &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Left: Address & Mascot Badge -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <span aria-hidden="true">🏰</span>
+            <span>Alamat Sekretariat</span>
+          </h3>
+          <address class="footer-address">
+            <strong>HIMSI UMN</strong><br>
+            Universitas Multimedia Nusantara<br>
+            Jl. Scientia Boulevard, Gading Serpong<br>
+            Tangerang, Banten 15811
+          </address>
+          <a href="index.html" aria-label="Kembali ke atas dengan Sir Disco">
+            <img src="assets/mascot-badge.svg" alt="Lencana Sir Disco Maskot Resmi" class="footer-mascot-badge" width="68" height="68">
+          </a>
+        </div>
+
+        <!-- Center: Crest Logo, Tagline, Copyright -->
+        <div class="footer-center">
+          <img src="assets/logo-disco-xiv.svg" alt="Logo Crest DISCO XIV" class="footer-logo" width="90" height="78">
+          <p class="footer-tagline">"Satu Meja, Berjuta Cerita"</p>
+          <div class="footer-hashtag">#SatuMejaBerjutaCerita</div>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+        </div>
+
+        <!-- Right: Social Media -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <span aria-hidden="true">📜</span>
+            <span>Media Sosial</span>
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--color-parchment-border); margin-bottom: 0.75rem;">
+            Ikuti warta dan perkembangan terbaru jamuan agung DISCO XIV:
+          </p>
+          <a href="https://instagram.com/discoumn_si" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Kunjungi Instagram Resmi @discoumn_si">
+            <span aria-hidden="true">📷</span>
+            <span>@discoumn_si</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="footer-copyright">
+        <p>&copy; 2027 D'Information System Community Outbound. Seluruh hak cipta dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
