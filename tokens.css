@@ -1,0 +1,159 @@
+/**
+ * DISCO XIV - Design Tokens (Royal Vintage / Nobility)
+ * Himpunan Mahasiswa Sistem Informasi (HIMSI) UMN
+ */
+
+:root {
+  /* ==========================================================================
+     Color Palette - Royal Vintage / Nobility
+     ========================================================================== */
+  /* Oxblood Burgundy & Deep Wines (Primary Dark) */
+  --color-burgundy-primary: #4A0E1B;
+  --color-burgundy-deep: #6B1A2B;
+  --color-burgundy-dark: #2E0811;
+  --color-burgundy-night: #1C040A;
+  --color-burgundy-midnight: #160308;
+  --color-burgundy-translucent: rgba(74, 14, 27, 0.88);
+  --color-burgundy-glass: rgba(58, 10, 20, 0.72);
+
+  /* Antique & Noble Gold Accents */
+  --color-gold-antique: #C9A24B;
+  --color-gold-light: #E6CF8B;
+  --color-gold-champagne: #F4E7C5;
+  --color-gold-dark: #8C6A22;
+  --color-gold-bronze: #5E430F;
+  --color-gold-glow: rgba(201, 162, 75, 0.35);
+
+  /* Parchment & Aged Cream (Light Surfaces & Cards) */
+  --color-parchment-ivory: #F3E9D2;
+  --color-parchment-aged: #E8DCC0;
+  --color-parchment-light: #FAF6EE;
+  --color-parchment-border: #D5C29B;
+
+  /* Midnight Ink (Dark Contrast Sections) */
+  --color-midnight-ink: #14101A;
+  --color-midnight-surface: #1E1726;
+  --color-midnight-elevated: #281F33;
+  --color-midnight-card: #20131F;
+
+  /* Royal Emerald (Sparing Accent) */
+  --color-emerald-royal: #0F3D3A;
+  --color-emerald-light: #1E5C58;
+
+  /* Wax Seal Crimson */
+  --color-wax-crimson: #8C1C2D;
+  --color-wax-deep: #550D19;
+  --color-wax-shadow: rgba(43, 5, 13, 0.6);
+
+  /* Functional & State Colors */
+  --color-text-dark: #2A1715;
+  --color-text-muted: #6B5B52;
+  --color-text-light: #FAF4E6;
+  --color-text-light-muted: #D5C7B2;
+  --color-success: #1E6B47;
+  --color-error: #9E1F2A;
+
+  /* ==========================================================================
+     Metallic Gradients & Textures
+     ========================================================================== */
+  --gradient-gold: linear-gradient(135deg, #F4E7C5 0%, #E6CF8B 25%, #C9A24B 50%, #8C6A22 80%, #D4AF37 100%);
+  --gradient-gold-shimmer: linear-gradient(90deg, #C9A24B 0%, #FAF0D6 30%, #C9A24B 60%, #E6CF8B 100%);
+  --gradient-burgundy-card: linear-gradient(145deg, #380B15 0%, #4A0E1B 50%, #25050C 100%);
+  --gradient-parchment: linear-gradient(175deg, #FAF6EE 0%, #F3E9D2 55%, #E8DCC0 100%);
+  --gradient-midnight: linear-gradient(180deg, #1A0A16 0%, #14101A 60%, #0E0A12 100%);
+  /* Hero overlay: left side darker for text legibility; right/top lighter so villa & moon shine through */
+  --gradient-hero-overlay: 
+    linear-gradient(to right, rgba(20, 4, 10, 0.78) 0%, rgba(20, 4, 10, 0.55) 45%, rgba(10, 2, 6, 0.18) 100%),
+    linear-gradient(to bottom, rgba(10, 2, 6, 0.0) 0%, rgba(10, 2, 6, 0.0) 60%, rgba(10, 2, 6, 0.75) 100%);
+
+  /* ==========================================================================
+     Typography Tokens
+     ========================================================================== */
+  --font-heading: 'Cinzel', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-serif-accent: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-body: 'Lora', Georgia, 'Times New Roman', serif;
+
+  --font-size-xs: clamp(0.72rem, 0.68rem + 0.2vw, 0.82rem);
+  --font-size-sm: clamp(0.85rem, 0.8rem + 0.25vw, 0.95rem);
+  --font-size-base: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  --font-size-md: clamp(1.15rem, 1.05rem + 0.5vw, 1.35rem);
+  --font-size-lg: clamp(1.35rem, 1.2rem + 0.8vw, 1.75rem);
+  --font-size-xl: clamp(1.75rem, 1.5rem + 1.2vw, 2.35rem);
+  --font-size-2xl: clamp(2.2rem, 1.8rem + 1.8vw, 3.2rem);
+  --font-size-hero: clamp(2.8rem, 2.2rem + 3.2vw, 5.5rem);
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-wider: 0.16em;
+  --letter-spacing-royal: 0.25em;
+
+  /* ==========================================================================
+     Spacing & Layout
+     ========================================================================== */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+
+  --container-max-width: 1240px;
+  --container-narrow: 860px;
+  --container-padding: clamp(1.2rem, 4vw, 2.5rem);
+
+  /* ==========================================================================
+     Borders, Outlines & Radii
+     ========================================================================== */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  --border-gold-thin: 1px solid var(--color-gold-antique);
+  --border-gold-double: 3px double var(--color-gold-antique);
+  --border-parchment: 1px solid var(--color-parchment-border);
+
+  /* ==========================================================================
+     Shadows & Royal Glows
+     ========================================================================== */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --shadow-gold-glow: 0 0 24px var(--color-gold-glow);
+  --shadow-gold-subtle: 0 0 12px rgba(201, 162, 75, 0.2);
+  --shadow-candle-glow: 0 0 45px rgba(230, 207, 139, 0.3);
+
+  /* ==========================================================================
+     Transitions & Motion
+     ========================================================================== */
+  --transition-fast: 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-normal: 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-royal: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Z-indices */
+  --z-nav: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0.01ms;
+    --transition-normal: 0.01ms;
+    --transition-slow: 0.01ms;
+    --transition-royal: 0.01ms;
+  }
+}

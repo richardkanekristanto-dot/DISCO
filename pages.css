@@ -1,0 +1,1442 @@
+/**
+ * DISCO XIV - Page-Specific Styles
+ * Hero, Banquet Timeline, Division Menu, Auth & RSVP Forms
+ */
+
+/* ==========================================================================
+   Hero Section (Grand Royal Feast at the Villa)
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: calc(5.5rem + var(--space-xl));
+  padding-bottom: var(--space-4xl);
+  background-image: 
+    var(--gradient-hero-overlay),
+    url('../assets/images/villa-hero.svg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: scroll;
+  overflow: hidden;
+}
+
+/* Scalloped Draped Curtain Bottom Edge */
+.hero-scallop-edge {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 48' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C50,38 100,38 150,0 C200,38 250,38 300,0 C350,38 400,38 450,0 C500,38 550,38 600,0 C650,38 700,38 750,0 C800,38 850,38 900,0 C950,38 1000,38 1050,0 C1100,38 1150,38 1200,0 L1200,48 L0,48 Z' fill='%2314101A'/%3E%3C/svg%3E");
+  background-size: 600px 48px;
+  background-repeat: repeat-x;
+  z-index: 4;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: var(--space-2xl);
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-xl);
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 960px) {
+  .hero-content {
+    align-items: center;
+  }
+}
+
+.hero-crest-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-pill);
+  background: rgba(74, 14, 27, 0.7);
+  border: 1px solid var(--color-gold-antique);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-royal);
+  color: var(--color-gold-champagne);
+  box-shadow: 0 0 16px rgba(201, 162, 75, 0.25);
+  margin-bottom: var(--space-sm);
+  width: fit-content;
+}
+
+.hero-title {
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-black);
+  line-height: 1.05;
+  margin-bottom: var(--space-xs);
+  letter-spacing: var(--letter-spacing-wide);
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 28px rgba(201, 162, 75, 0.45));
+}
+
+.hero-tagline {
+  font-family: var(--font-serif-accent);
+  font-style: italic;
+  font-size: clamp(1.2rem, 1.1rem + 0.8vw, 1.85rem);
+  color: var(--color-parchment-ivory);
+  margin-bottom: var(--space-sm);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+}
+
+.hero-theme-note {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  color: var(--color-gold-light);
+  margin-bottom: var(--space-md);
+  opacity: 0.9;
+}
+
+.hero-date-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.5rem 1.25rem;
+  background: rgba(20, 16, 26, 0.75);
+  border: 1px solid var(--color-gold-antique);
+  box-shadow: 0 0 0 2px rgba(74, 14, 27, 0.8);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-gold-champagne);
+  margin-bottom: var(--space-xl);
+  width: fit-content;
+}
+
+.hero-date-icon {
+  color: var(--color-gold-light);
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 960px) {
+  .hero-actions {
+    justify-content: center;
+  }
+}
+
+/* Hero Right: Mascot on Gilded Pedestal with Candle Glow */
+.hero-mascot-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Ambient Candle Glow behind Sir Disco */
+.candle-glow-sphere {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(230, 207, 139, 0.35) 0%, rgba(201, 162, 75, 0.15) 45%, transparent 70%);
+  filter: blur(25px);
+  z-index: 1;
+  animation: candleFlicker 4.5s ease-in-out infinite alternate;
+}
+
+@keyframes candleFlicker {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  50% { transform: scale(1.05); opacity: 0.95; }
+  100% { transform: scale(0.98); opacity: 0.8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .candle-glow-sphere {
+    animation: none;
+  }
+}
+
+.hero-mascot-img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 14px 25px rgba(0, 0, 0, 0.65));
+  animation: floatSirDisco 5s ease-in-out infinite;
+}
+
+@keyframes floatSirDisco {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-mascot-img {
+    animation: none;
+  }
+}
+
+/* Gilded Pedestal Base */
+.mascot-pedestal {
+  width: 240px;
+  height: 36px;
+  background: radial-gradient(ellipse at center, #E6CF8B 0%, #C9A24B 40%, #7A5714 85%);
+  border-radius: 50%;
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.6),
+    0 0 20px var(--color-gold-glow);
+  border: 2px solid #FAF0D6;
+  position: relative;
+  z-index: 1;
+  margin-top: -15px;
+}
+
+.mascot-caption-pill {
+  margin-top: var(--space-md);
+  padding: 0.35rem 1rem;
+  background: rgba(30, 8, 16, 0.8);
+  border: 1px solid var(--color-gold-antique);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-serif-accent);
+  font-style: italic;
+  font-size: var(--font-size-sm);
+  color: var(--color-gold-light);
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   Section: "Apa Itu DISCO?" (Tradisi & Sejarah HIMSI UMN)
+   ========================================================================== */
+.section-about-disco {
+  padding-block: var(--space-4xl);
+  background: linear-gradient(180deg, var(--color-midnight-ink) 0%, #200610 50%, var(--color-burgundy-midnight) 100%);
+  position: relative;
+  border-bottom: 1px solid rgba(201, 162, 75, 0.25);
+}
+
+.about-disco-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: var(--space-2xl);
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 860px) {
+  .about-disco-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-xl);
+  }
+}
+
+.about-disco-logo-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.royal-crest-showcase {
+  background: var(--gradient-burgundy-card);
+  border: 2px solid var(--color-gold-antique);
+  box-shadow: 
+    0 0 0 3px rgba(74, 14, 27, 0.9),
+    0 16px 40px rgba(0, 0, 0, 0.65),
+    0 0 25px var(--color-gold-glow),
+    inset 0 0 20px rgba(201, 162, 75, 0.2);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+}
+
+.about-disco-crest-img {
+  width: 170px;
+  height: auto;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.6));
+  margin-bottom: var(--space-md);
+  transition: transform var(--transition-normal);
+}
+
+.royal-crest-showcase:hover .about-disco-crest-img {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+.about-disco-badge-tag {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-pill);
+  background: rgba(20, 3, 8, 0.85);
+  border: 1px solid var(--color-gold-antique);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-royal);
+  color: var(--color-gold-champagne);
+  box-shadow: 0 0 10px rgba(201, 162, 75, 0.25);
+}
+
+.about-disco-narrative-card {
+  text-align: left;
+}
+
+@media (max-width: 860px) {
+  .about-disco-narrative-card {
+    text-align: center;
+  }
+}
+
+.about-disco-card-heading {
+  font-size: var(--font-size-xl);
+  color: var(--color-burgundy-primary);
+  margin-bottom: var(--space-md);
+  line-height: 1.3;
+}
+
+.about-disco-card-text {
+  font-size: var(--font-size-base);
+  line-height: 1.85;
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-md);
+}
+
+.about-disco-card-text strong {
+  color: var(--color-burgundy-primary);
+}
+.section-undangan {
+  padding-block: var(--space-4xl);
+  background-color: var(--color-midnight-ink);
+  position: relative;
+}
+
+.invitation-wrapper {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.invitation-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.invitation-wax-seal {
+  width: 90px;
+  height: 90px;
+  margin-inline: auto;
+  margin-top: -45px;
+  margin-bottom: var(--space-md);
+  filter: drop-shadow(0 6px 14px rgba(74, 14, 27, 0.6));
+}
+
+.invitation-salutation {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-spacing-royal);
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.invitation-heading {
+  font-size: var(--font-size-2xl);
+  color: var(--color-burgundy-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.invitation-theme {
+  font-family: var(--font-serif-accent);
+  font-style: italic;
+  font-size: var(--font-size-lg);
+  color: var(--color-burgundy-deep);
+  margin-bottom: var(--space-md);
+}
+
+.invitation-prose {
+  font-size: var(--font-size-base);
+  line-height: 1.85;
+  max-width: 780px;
+  margin-inline: auto;
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-2xl);
+}
+
+/* 3 Banquet Goals styled as Menu Courses */
+.banquet-goals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+  text-align: left;
+}
+
+@media (max-width: 860px) {
+  .banquet-goals-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.goal-menu-item {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-parchment-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  position: relative;
+  box-shadow: inset 0 0 12px rgba(201, 162, 75, 0.1);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.goal-menu-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-gold-antique);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.goal-course-number {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-royal);
+  color: var(--color-burgundy-primary);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2xs);
+}
+
+.goal-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  color: var(--color-burgundy-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.goal-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Section 3: "Rangkaian Acara" (Banquet Course Timeline)
+   ========================================================================== */
+.section-timeline {
+  padding-block: var(--space-4xl);
+  background-color: var(--color-burgundy-midnight);
+  position: relative;
+}
+
+.timeline-menu-wrap {
+  max-width: 860px;
+  margin-inline: auto;
+  position: relative;
+}
+
+/* Central Ornate Timeline Stem */
+.timeline-menu-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--color-gold-antique) 10%, var(--color-gold-antique) 90%, transparent);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .timeline-menu-wrap::before {
+    left: 24px;
+  }
+}
+
+.timeline-course-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .timeline-course-item {
+    grid-template-columns: 1fr;
+    padding-left: 60px;
+    gap: var(--space-sm);
+  }
+}
+
+.timeline-course-item:nth-child(even) .course-info-col {
+  order: 2;
+  text-align: left;
+}
+
+.timeline-course-item:nth-child(even) .course-date-col {
+  order: 1;
+  text-align: right;
+}
+
+.timeline-course-item:nth-child(odd) .course-info-col {
+  order: 1;
+  text-align: right;
+}
+
+.timeline-course-item:nth-child(odd) .course-date-col {
+  order: 2;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .timeline-course-item:nth-child(even) .course-info-col,
+  .timeline-course-item:nth-child(odd) .course-info-col,
+  .timeline-course-item:nth-child(even) .course-date-col,
+  .timeline-course-item:nth-child(odd) .course-date-col {
+    order: unset;
+    text-align: left;
+  }
+}
+
+/* Timeline Center Rosette Node */
+.timeline-node {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translate(-50%, 0);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-burgundy-primary);
+  border: 2px solid var(--color-gold-light);
+  box-shadow: 0 0 14px var(--color-gold-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-champagne);
+  font-size: 0.75rem;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .timeline-node {
+    left: 24px;
+  }
+}
+
+.course-card {
+  background: var(--gradient-burgundy-card);
+  border: 1px solid var(--color-gold-antique);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.course-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-royal);
+  text-transform: uppercase;
+  color: var(--color-gold-antique);
+  margin-bottom: var(--space-2xs);
+}
+
+.course-title {
+  font-size: var(--font-size-md);
+  color: var(--color-gold-champagne);
+  margin-bottom: var(--space-2xs);
+}
+
+.course-meta {
+  display: flex;
+  gap: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--color-parchment-border);
+  margin-bottom: var(--space-xs);
+}
+
+.course-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-parchment-ivory);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Section 4: Stats Strip (Antique Gilded Frames)
+   ========================================================================== */
+.section-stats {
+  padding-block: var(--space-3xl);
+  background: linear-gradient(180deg, var(--color-midnight-ink) 0%, #200710 100%);
+  border-block: 1px solid rgba(201, 162, 75, 0.35);
+  position: relative;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-frame {
+  background: rgba(30, 6, 13, 0.7);
+  border: 1px solid var(--color-gold-antique);
+  box-shadow: 
+    0 0 0 2px rgba(74, 14, 27, 0.8),
+    0 8px 20px rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-md);
+  position: relative;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.stat-frame:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-gold-light);
+  box-shadow: 
+    0 0 0 2px var(--color-burgundy-deep),
+    0 0 16px var(--color-gold-glow);
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-black);
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.1;
+  margin-bottom: var(--space-2xs);
+}
+
+.stat-label {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-parchment-ivory);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Section 5: Vintage Pocket-Watch Date Block (Static Countdown Display)
+   ========================================================================== */
+.section-date-block {
+  padding-block: var(--space-4xl);
+  background-color: var(--color-burgundy-midnight);
+  position: relative;
+}
+
+.pocket-watch-card {
+  max-width: 760px;
+  margin-inline: auto;
+  background: var(--gradient-burgundy-card);
+  border: 2px solid var(--color-gold-antique);
+  box-shadow: 
+    0 0 0 4px rgba(74, 14, 27, 0.9),
+    0 16px 48px rgba(0, 0, 0, 0.7),
+    0 0 28px var(--color-gold-glow);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.8rem, 4vw, 3rem);
+  text-align: center;
+  position: relative;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+@media (max-width: 640px) {
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.countdown-slot {
+  background: rgba(18, 3, 7, 0.7);
+  border: 1px solid rgba(201, 162, 75, 0.4);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-sm);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-digit {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-black);
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
+.countdown-unit {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-parchment-border);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Section 6: Partner & Sponsor Marquee Section
+   ========================================================================== */
+.section-partners {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-midnight-ink);
+  position: relative;
+}
+
+/* ==========================================================================
+   Page: Divisi (Royal Divisions Banquet Menu)
+   ========================================================================== */
+/* ==========================================================================
+   Page: Divisi (Royal Round Banquet Table Showcase - "Satu Meja, Satu Titik Temu")
+   ========================================================================== */
+.divisions-page-wrap {
+  padding-top: calc(5.5rem + var(--space-xl));
+  padding-bottom: var(--space-4xl);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ambient Royal Banquet Hall Background */
+.divisions-page-wrap::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(107, 26, 43, 0.4) 0%, rgba(74, 14, 27, 0.2) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(40px);
+}
+
+/* Hidden Radio Inputs for Seat Selection */
+.seat-radio, .spin-toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
+}
+
+/* Table Controls Bar (Pill selector & Spin Toggle) */
+.table-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2xl);
+  position: relative;
+  z-index: 5;
+}
+
+.spin-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.45rem 1.15rem;
+  background: rgba(35, 7, 15, 0.85);
+  border: 1px solid var(--color-gold-antique);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-gold-champagne);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-fast);
+}
+
+.spin-toggle-label:hover {
+  background: rgba(74, 14, 27, 0.95);
+  border-color: var(--color-gold-light);
+  box-shadow: 0 0 14px var(--color-gold-glow);
+}
+
+/* Quick Selector Pill Tabs for All Divisions */
+.seat-tab-label {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-parchment-border);
+  background: rgba(20, 4, 9, 0.7);
+  border: 1px solid rgba(201, 162, 75, 0.3);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.seat-tab-label:hover {
+  color: #FFF;
+  border-color: var(--color-gold-light);
+  background: rgba(74, 14, 27, 0.6);
+  transform: translateY(-1px);
+}
+
+/* Highlight Active Tab Label */
+.divisions-showcase:has(#seat-bph:checked) .tab-bph,
+.divisions-showcase:has(#seat-acara:checked) .tab-acara,
+.divisions-showcase:has(#seat-regis:checked) .tab-regis,
+.divisions-showcase:has(#seat-humas:checked) .tab-humas,
+.divisions-showcase:has(#seat-sponsorship:checked) .tab-sponsorship,
+.divisions-showcase:has(#seat-dokvis:checked) .tab-dokvis,
+.divisions-showcase:has(#seat-perkap:checked) .tab-perkap,
+.divisions-showcase:has(#seat-konsumsi:checked) .tab-konsumsi,
+.divisions-showcase:has(#seat-k3:checked) .tab-k3 {
+  background: var(--gradient-gold);
+  color: var(--color-burgundy-midnight);
+  font-weight: var(--font-weight-bold);
+  border-color: var(--color-gold-light);
+  box-shadow: 0 0 12px var(--color-gold-glow);
+}
+
+/* ==========================================================================
+   The Royal Round Banquet Table Arena ("Satu Meja, Berjuta Cerita")
+   ========================================================================== */
+.table-stage-arena {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  margin-bottom: var(--space-3xl);
+  perspective: 1000px;
+}
+
+.table-wrapper {
+  --table-size: clamp(480px, 52vw, 680px);
+  --table-radius: calc(var(--table-size) * 0.385);
+  --plate-size: clamp(82px, 8.8vw, 112px);
+  --centerpiece-size: clamp(140px, 15vw, 195px);
+
+  position: relative;
+  width: var(--table-size);
+  height: var(--table-size);
+  margin-inline: auto;
+  margin-block: var(--space-lg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Luxurious Polished Royal Banquet Table with Inlaid Gold Filigree */
+  background-color: #1A0308;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 230, 160, 0.12) 0%, transparent 45%),
+    url('../assets/ornaments/banquet-table-texture.svg');
+  background-size: cover, 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Triple Imperial Rim with Deep Candlelit Shadows */
+  border: 4px solid var(--color-gold-antique);
+  box-shadow: 
+    0 0 0 4px rgba(74, 14, 27, 0.95),
+    0 0 0 8px var(--color-gold-dark),
+    0 0 0 14px rgba(18, 3, 7, 0.98),
+    0 0 0 16px rgba(201, 162, 75, 0.4),
+    0 28px 70px rgba(0, 0, 0, 0.9),
+    0 0 50px rgba(201, 162, 75, 0.35),
+    inset 0 0 60px rgba(0, 0, 0, 0.8);
+  transition: box-shadow var(--transition-normal);
+}
+
+/* Outer Candlelight Sconce Radiance around Table */
+.table-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(230, 207, 139, 0.18) 0%, rgba(201, 162, 75, 0.05) 55%, transparent 75%);
+  pointer-events: none;
+  filter: blur(15px);
+  z-index: 1;
+}
+
+/* Centerpiece Plate (DISCO XIV Royal Grand Salver & Cloche) */
+.table-centerpiece {
+  position: absolute;
+  width: var(--centerpiece-size);
+  height: var(--centerpiece-size);
+  border-radius: 50%;
+  z-index: 15;
+  background: radial-gradient(circle at 45% 40%, #78182E 0%, #4A0E1B 45%, #24050C 85%, #120105 100%);
+  border: 3px double var(--color-gold-light);
+  box-shadow: 
+    0 0 0 4px rgba(74, 14, 27, 0.95),
+    0 0 0 6px var(--color-gold-antique),
+    0 12px 30px rgba(0, 0, 0, 0.8),
+    inset 0 0 20px rgba(201, 162, 75, 0.45),
+    0 0 28px rgba(230, 207, 139, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xs);
+  pointer-events: auto;
+  user-select: none;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.table-centerpiece:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 0 4px var(--color-gold-light),
+    0 0 35px var(--color-gold-glow),
+    0 16px 36px rgba(0, 0, 0, 0.9);
+}
+
+.table-centerpiece-logo {
+  width: 54%;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+  margin-bottom: 2px;
+}
+
+.table-centerpiece-title {
+  font-family: var(--font-heading);
+  font-size: clamp(0.72rem, 0.85vw, 0.92rem);
+  font-weight: var(--font-weight-black);
+  letter-spacing: 0.14em;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.1;
+  text-shadow: 0 0 8px rgba(201, 162, 75, 0.4);
+}
+
+.table-centerpiece-motto {
+  font-family: var(--font-serif-accent);
+  font-style: italic;
+  font-size: clamp(0.62rem, 0.75vw, 0.8rem);
+  color: var(--color-gold-champagne);
+  line-height: 1.1;
+  margin-top: 2px;
+  opacity: 0.95;
+}
+
+/* ==========================================================================
+   Rotating Orbit Ring & Fine Dining Charger Plates
+   ========================================================================== */
+.table-orbit-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: royalTableSpin 55s linear infinite;
+}
+
+/* Pause rotation on table hover */
+.table-wrapper:hover .table-orbit-ring,
+.table-wrapper:hover .plate-inner {
+  animation-play-state: paused;
+}
+
+/* Pause when spin toggle checkbox is checked */
+.divisions-showcase:has(#toggle-spin:checked) .table-orbit-ring,
+.divisions-showcase:has(#toggle-spin:checked) .plate-inner {
+  animation-play-state: paused;
+}
+
+@keyframes royalTableSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes counterPlateSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .table-orbit-ring,
+  .plate-inner {
+    animation: none !important;
+  }
+}
+
+/* Individual Charger Plate Labels (Clickable Royal Banquet Seats) */
+.table-seat-plate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--plate-size);
+  height: var(--plate-size);
+  margin-top: calc(var(--plate-size) / -2);
+  margin-left: calc(var(--plate-size) / -2);
+  transform: rotate(var(--angle)) translateY(calc(var(--table-radius) * -1));
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Plate Counter-Rotation to keep graphics upright & Gilded Fine Dining Design */
+.plate-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 6px;
+  text-align: center;
+
+  /* Real Fine Dining Gilded Porcelain Aesthetic */
+  background: 
+    radial-gradient(circle at 40% 35%, #FFFFFF 0%, #FAF5EA 45%, #EADBBA 85%, #CBB892 100%);
+  border: 3px double var(--color-gold-antique);
+  box-shadow: 
+    0 0 0 2px rgba(74, 14, 27, 0.9),
+    0 0 0 4px var(--color-gold-dark),
+    0 8px 24px rgba(0, 0, 0, 0.75),
+    inset 0 0 14px rgba(201, 162, 75, 0.45);
+  animation: counterPlateSpin 55s linear infinite;
+  transform: rotate(calc(-1 * var(--angle)));
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+/* Concentric Gold Filigree Inlay Ring inside each plate */
+.plate-inner::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  border: 1px dashed rgba(201, 162, 75, 0.6);
+  pointer-events: none;
+}
+
+.table-seat-plate:hover .plate-inner {
+  transform: rotate(calc(-1 * var(--angle))) scale(1.15) translateY(-4px);
+  border-color: #FFFFFF;
+  background: radial-gradient(circle at 35% 30%, #FFFFFF 0%, #FFF8E6 50%, #F5E5BE 100%);
+  box-shadow: 
+    0 0 0 3px var(--color-gold-light),
+    0 0 24px rgba(230, 207, 139, 0.75),
+    0 16px 32px rgba(0, 0, 0, 0.85);
+}
+
+/* Plate Angle Positions (9 Division Seats around 360 deg) */
+.plate-bph         { --angle: 0deg; }
+.plate-acara       { --angle: 40deg; }
+.plate-regis       { --angle: 80deg; }
+.plate-humas       { --angle: 120deg; }
+.plate-sponsorship { --angle: 160deg; }
+.plate-dokvis      { --angle: 200deg; }
+.plate-perkap      { --angle: 240deg; }
+.plate-konsumsi    { --angle: 280deg; }
+.plate-k3          { --angle: 320deg; }
+
+/* Plate Vector Emblem & Name */
+.plate-emblem-svg {
+  width: 50%;
+  height: 50%;
+  margin-bottom: 2px;
+  filter: drop-shadow(0 2px 4px rgba(74, 14, 27, 0.5));
+  transition: transform var(--transition-fast);
+}
+
+.table-seat-plate:hover .plate-emblem-svg {
+  transform: scale(1.12);
+}
+
+.plate-title-text {
+  font-family: var(--font-heading);
+  font-size: clamp(0.55rem, 0.65vw, 0.72rem);
+  font-weight: var(--font-weight-black);
+  letter-spacing: 0.06em;
+  color: var(--color-burgundy-primary);
+  line-height: 1.1;
+  text-transform: uppercase;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Active Highlighted Plate State (When Selected) */
+.divisions-showcase:has(#seat-bph:checked) .plate-bph .plate-inner,
+.divisions-showcase:has(#seat-acara:checked) .plate-acara .plate-inner,
+.divisions-showcase:has(#seat-regis:checked) .plate-regis .plate-inner,
+.divisions-showcase:has(#seat-humas:checked) .plate-humas .plate-inner,
+.divisions-showcase:has(#seat-sponsorship:checked) .plate-sponsorship .plate-inner,
+.divisions-showcase:has(#seat-dokvis:checked) .plate-dokvis .plate-inner,
+.divisions-showcase:has(#seat-perkap:checked) .plate-perkap .plate-inner,
+.divisions-showcase:has(#seat-konsumsi:checked) .plate-konsumsi .plate-inner,
+.divisions-showcase:has(#seat-k3:checked) .plate-k3 .plate-inner {
+  transform: rotate(calc(-1 * var(--angle))) scale(1.22) translateY(-6px);
+  border-color: #FFFFFF;
+  background: radial-gradient(circle at 35% 30%, #FFFFFF 0%, #FFF5DB 45%, #E6CF8B 100%);
+  box-shadow: 
+    0 0 0 3px var(--color-burgundy-primary),
+    0 0 0 6px var(--color-gold-light),
+    0 0 35px rgba(230, 207, 139, 0.95),
+    0 0 55px rgba(201, 162, 75, 0.5),
+    0 18px 36px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   Spotlight Course Card (Active Division Detail Card)
+   ========================================================================== */
+.spotlight-deck {
+  max-width: 760px;
+  width: 100%;
+  margin-inline: auto;
+  position: relative;
+  z-index: 5;
+}
+
+.spotlight-card {
+  display: none;
+  background: var(--gradient-parchment);
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-gold-antique);
+  box-shadow: 
+    0 0 0 3px rgba(74, 14, 27, 0.85),
+    0 18px 45px rgba(0, 0, 0, 0.65),
+    inset 0 0 25px rgba(201, 162, 75, 0.18);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.6rem, 3.5vw, 2.75rem);
+  position: relative;
+  text-align: center;
+  animation: spotlightFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes spotlightFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Reveal active spotlight card */
+.divisions-showcase:has(#seat-bph:checked) .spotlight-bph,
+.divisions-showcase:has(#seat-acara:checked) .spotlight-acara,
+.divisions-showcase:has(#seat-regis:checked) .spotlight-regis,
+.divisions-showcase:has(#seat-humas:checked) .spotlight-humas,
+.divisions-showcase:has(#seat-sponsorship:checked) .spotlight-sponsorship,
+.divisions-showcase:has(#seat-dokvis:checked) .spotlight-dokvis,
+.divisions-showcase:has(#seat-perkap:checked) .spotlight-perkap,
+.divisions-showcase:has(#seat-konsumsi:checked) .spotlight-konsumsi,
+.divisions-showcase:has(#seat-k3:checked) .spotlight-k3 {
+  display: block;
+}
+
+.spotlight-header {
+  margin-bottom: var(--space-md);
+}
+
+.spotlight-badge {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-royal);
+  text-transform: uppercase;
+  background: var(--color-burgundy-primary);
+  color: var(--color-gold-champagne);
+  border: 1px solid var(--color-gold-antique);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-xs);
+}
+
+.spotlight-title {
+  color: var(--color-burgundy-primary);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-2xs);
+}
+
+.spotlight-subtitle {
+  font-family: var(--font-serif-accent);
+  font-style: italic;
+  font-size: var(--font-size-md);
+  color: var(--color-burgundy-deep);
+}
+
+.spotlight-prose {
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+  color: var(--color-text-dark);
+  max-width: 620px;
+  margin-inline: auto;
+  margin-bottom: var(--space-lg);
+}
+
+.spotlight-nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--color-parchment-border);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .spotlight-nav-actions {
+    justify-content: center;
+  }
+}
+
+/* Responsive Table Adjustments for Mobile Devices */
+@media (max-width: 720px) {
+  .table-wrapper {
+    --table-size: 340px;
+    --table-radius: 125px;
+    --plate-size: 64px;
+    --centerpiece-size: 110px;
+  }
+
+  .table-centerpiece-motto {
+    display: none;
+  }
+
+  .plate-title-text {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .table-wrapper {
+    --table-size: 300px;
+    --table-radius: 112px;
+    --plate-size: 56px;
+    --centerpiece-size: 95px;
+  }
+}
+
+/* ==========================================================================
+   Secondary Full Division Cards Grid (Below Interactive Showcase)
+   ========================================================================== */
+.divisions-grid-section {
+  margin-top: var(--space-4xl);
+  position: relative;
+  z-index: 2;
+}
+
+.divisions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-xl);
+}
+
+.division-menu-card {
+  background: var(--gradient-parchment);
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-gold-antique);
+  box-shadow: 
+    0 0 0 2px rgba(74, 14, 27, 0.7),
+    0 10px 28px rgba(0, 0, 0, 0.45);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.division-menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 0 0 2px var(--color-gold-antique),
+    0 16px 36px rgba(0, 0, 0, 0.6),
+    0 0 20px var(--color-gold-glow);
+}
+
+.division-crest-icon {
+  width: 58px;
+  height: 58px;
+  margin-bottom: var(--space-sm);
+  filter: drop-shadow(0 4px 6px rgba(74, 14, 27, 0.3));
+}
+
+.division-course-tag {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-royal);
+  color: var(--color-burgundy-primary);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2xs);
+}
+
+.division-card-title {
+  color: var(--color-burgundy-primary);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.division-card-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+  flex-grow: 1;
+}
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-royal);
+  color: var(--color-burgundy-primary);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2xs);
+}
+
+.division-card-title {
+  color: var(--color-burgundy-primary);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.division-card-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+  flex-grow: 1;
+}
+
+/* ==========================================================================
+   Page: Masuk & Daftar (Auth / RSVP Centered Envelopes)
+   ========================================================================== */
+.auth-page-wrap {
+  padding-top: calc(5.5rem + var(--space-xl));
+  padding-bottom: var(--space-4xl);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter-envelope-card {
+  max-width: 540px;
+  width: 100%;
+  margin-inline: auto;
+  background: var(--gradient-parchment);
+  border: 2px solid var(--color-gold-antique);
+  box-shadow: 
+    0 0 0 4px rgba(74, 14, 27, 0.85),
+    0 24px 60px rgba(0, 0, 0, 0.65),
+    inset 0 0 30px rgba(201, 162, 75, 0.2);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.8rem, 4vw, 3rem);
+  position: relative;
+  text-align: center;
+}
+
+.envelope-wax-seal {
+  width: 95px;
+  height: 95px;
+  margin-inline: auto;
+  margin-top: -55px;
+  margin-bottom: var(--space-md);
+  filter: drop-shadow(0 6px 14px rgba(74, 14, 27, 0.6));
+}
+
+.auth-header {
+  margin-bottom: var(--space-xl);
+}
+
+.auth-title {
+  color: var(--color-burgundy-primary);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.auth-subtitle {
+  font-family: var(--font-serif-accent);
+  font-style: italic;
+  font-size: var(--font-size-md);
+  color: var(--color-burgundy-deep);
+}
+
+.auth-footer-link {
+  margin-top: var(--space-lg);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.auth-footer-link a {
+  color: var(--color-burgundy-primary);
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+}
+
+.password-toggle-affordance {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
